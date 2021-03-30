@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilohome1.css">
+    <link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/7785zegotao.ico">
+
+    <title>Home</title>
+  </head>
+
+    <body>
+    <!--Navbar da Página-->
+ <nav class="navbar sticky-top navbar-expand-lg navbar-dark " style="background-color: #39bcb6; padding: 15px;">
+
+      <!--Botão collapse navbar-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite" style="background-color: black; ">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSite" >
+        
+        <ul class="navbar-nav mr-auto">
+            <!--Dropdown Item Navbar -->
+
+
+          <!--1 início-->
+          <br>
+            <li class="nav-item">
+              &nbsp&nbsp<a href="home.html" style="color:#ffff; font-family: arial;font-size: 1.25em;">Home</a>&nbsp&nbsp&nbsp&nbsp
+            </li>
+
+          <!--2 agendamento-->
+            <li class="nav-item">
+             &nbsp&nbsp<a href="#" style="color:#ffff; font-family: arial;font-size: 1.25em;">Agendamento</a>&nbsp&nbsp&nbsp&nbsp
+            </li>
+
+          <!--3 Altere seus Dados-->
+            <li class="nav-item">
+             &nbsp&nbsp<a href="AltDados.html" style="color:#ffff; font-size: 1.25em; font-family: arial;">Altere seus dados</a>&nbsp&nbsp&nbsp&nbsp
+            </li>
+
+          <!--4 Carteira de Vacinação-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownSite" data-toggle="dropdown" style="font-size: 1.25em; padding-top: 0px;;color:#ffff;font-family: arial;">&nbsp Carteira de vacinação &nbsp</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="carteira.html" >Carteira de Vacinação</a>
+              <a class="dropdown-item" href="carteirainfantil.html">Carteira de Vacinação Infantil</a>
+            </div>
+          </li>
+
+        </ul>
+  
+
+        <ul class="navbar-nav ml-auto">        
+          
+          <!--Sobre-->
+            <li class="nav-item">
+              <button class="btn fa fa-question-circle" style="background-color: #39bcb6; color:black;font-size: 1.25em; padding: 10px;"><a  href="sobre.html" style="color:#ffff; font-family: arial;"> Sobre</a></button>
+            </li>
+
+          <!--Contate-nos-->
+            <li class="nav-item">
+              <button class="btn fa fa-phone-square" style="background-color: #39bcb6; color:black;font-size: 1.25em; padding: 10px;"><a  href="faleconosco.html" style="color:#ffff; font-family: arial;"> Contate-nos</a></button>
+            </li>
+        </ul>
+
+   </div>
+
+ </nav>
+<!-- Corpo -->
+<br><br>
+
+    <!--div vídeo-->
+    <div class="container-fluid" style="width: 100%; text-align: center;">
+      <section class="video">
+
+    <div class="container">
+      <div class="ytplayer" id="ytplayer">
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/LwUjglzIUhc" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+
+        <script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/embed/tRup-b3UrT4";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+    });
+  }
+
+</script>
+      </div>
+      <!--      <button type="button" class="button btn-primary align=" -->
+      <!--        left"" data-toggle="modal" data-target="#exampleModal" -->
+      <!--        data-whatever="@mdo">Falar com @mdo</button> -->
+
+    </div>
+  </section>
+    </div><br><br>
+
+    <!--div 1-->
+    <div class="container-fluid" style="width: 70%">
+        <div class="row"><br>
+              <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+                  <div class="card text-center">
+                      <div class="card-header" style="background-color: #4E598F">
+                          <h3 style="color:white;">Principais notícias sobre COVID-19</h3>
+                       </div>
+                      <div class="card-body">
+                        <p class="card-text">Fique por dentro das principais notícias relacionadas ao novo vírus COVID-19.</p>
+                        <a href="#" class="btn btn-success">Acessar</a>
+                      </div>
+                  </div><br>
+              </div>
+
+              <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+                  <div class="card text-center">
+                      <div class="card-header" style="background-color: #4E598F">
+                          <h3 style="color:white;">Principais notícias de Saúde</h3>
+                       </div>
+                      <div class="card-body">
+                        <p class="card-text">Fique por dentro das principais notícias que estão acontecendo sobre saúde.</p>
+                        <a href="#" class="btn btn-success">Acessar</a>
+                      </div>
+                  </div>
+              </div>     
+        </div><br><br>
+      </div>
+
+    <!--div 2-->
+    <div class="container-fluid" style="width: 70%">
+        <div class="row"><br>
+              <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                  <div class="card text-center">
+                      <div class="card-header" style="background-color: #4E598F">
+                          <h3 style="color:white;">Cadastramento de Filhos</h3>
+                       </div>
+                      <div class="card-body">
+                        <p class="card-text">Realize o cadastro da carteira de vacina digital dos seus filhos.</p>
+                        <a href="#" class="btn btn-success">Acessar</a>
+                      </div>
+                  </div><br>
+              </div>
+
+              <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                  <div class="card text-center">
+                      <div class="card-header" style="background-color: #4E598F">
+                          <h3 style="color:white;">Acesse sua caderneta de vacinação digital</h3>
+                       </div>
+                      <div class="card-body">
+                        <p class="card-text">Acesse sua caderneta de vacina.</p>
+                        <a href="#" class="btn btn-success">Acessar</a>
+                      </div>
+                  </div><br>
+              </div>     
+
+              <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                  <div class="card text-center">
+                      <div class="card-header" style="background-color: #4E598F">
+                          <h3 style="color:white;">Informações sobre vacinas</h3>
+                       </div>
+                      <div class="card-body">
+                        <p class="card-text">Fique por dentro das principais notícias e informações sobre as vacinas.</p>
+                        <a href="#" class="btn btn-success">Acessar</a>
+                      </div>
+                  </div>
+              </div>  
+        </div><br><br>
+</div>
+
+    <!--div 3-->
+    <div class="container-fluid" style="width: 70%; ">
+              <div class="row"><br>
+              <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+                  <div class="card text-center">
+                      <div class="card-header" style="background-color: #4E598F">
+                          <h3 style="color:white;">Locais de vacinação</h3>
+                       </div>
+                      <div class="card-body">
+                        <p class="card-text">Localize o posto de vacinação mais próximo de você.</p>
+                        <a href="#" class="btn btn-success">Acessar</a>
+                      </div>
+                  </div><br>
+              </div>
+
+              <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+                  <div class="card text-center">
+                      <div class="card-header" style="background-color: #4E598F">
+                          <h3 style="color:white;">Outras informações sobre saúde</h3>
+                       </div>
+                      <div class="card-body">
+                        <p class="card-text">Acesse o site da <b>Secretaria de saúde.</b></p>
+                        <a href="#" class="btn btn-success">Acessar</a>
+                      </div>
+                  </div>
+              </div>     
+        </div><br><br>
+    </div>
+
+<!--div 4-->
+    <div class="container-fluid" style="width: 60%">
+              <div class="row"><br>
+              <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+                  <div class="card text-center">
+                      <div class="card-header" style="background-color: #4E598F">
+                          <h3 style="color:white;">Você conhece o SUS?</h3>
+                       </div>
+                      <div class="card-body">
+                        <p class="card-text">Acesse o site do SUS para mais informações sobre o SUS e o cartão SUS.</p>
+                        <a href="https://conectesus-paciente.saude.gov.br/" class="btn btn-success">Acessar</a>
+                      </div>
+                  </div><br>
+              </div>
+              
+              <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6" style="text-align: center;">
+                <a href="URL DO FACEBOOK"><img border="0" src="img/gotao.png" /></a>
+              </div>
+        </div><br><br>
+    </div>
+
+
+<!-- Rodapé-->
+    <div class="container-fluid pt-3 navbar-fixed-bottom" id="container-rodape" style=" background-color: #39bcb6; color: white">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="font-size: 13px; text-align: center">
+         <p>SNV 2021 © Todos os direitos reservados</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/62e43a72a9.js"></script>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+*{
+	padding: 0; /*define a distancia entre os elementos do container*/
+	margin: 0; /*define a margem nos quatro cantos do elemento*/
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif; /*define a fonte de tudo que está dentro da tag body*/
+}
+
+/*imagem de fundo, imagem em degrade*/
+.fundo{
+	position: fixed; /*define a posição do elemento como fixo*/
+	width: 65%; /*define a posição e o largura da imagen na tela*/
+	height: 100%; /*define a quantidade de tela ocupada por altura*/
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	border-radius: 15px; /*arredonda as bordas da imagen de fundo*/
+}
+
+/*class que define os parametros de todo o container*/
+.container{
+	position: fixed; /*define a posição do elemento como fixo*/
+	width: 100vw; /*define a quantidade de tela ocupada por largura*/
+	height: 100vh; /*define a quantidade de tela ocupada por altura*/
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 7rem; /*define a aproximação entre os elementos do container*/
+	padding: 0 2rem; /*define a distancia entre os elementos do container*/
+}
+
+/*define o que está dentro da class img*/
+.img.carousel{
+	display: flex; /*torna a imagem do celular com a mulher flexivel para alinhamento*/
+	justify-content: flex-end; /*alinha a imagem no final do container flexivel*/
+	align-items: center; /*alinhar os itens flexiveis no centro do container*/
+}
+
+/*defini os parametros da imagem do telefone com a mulher*/
+.img.carousel img{
+	width: 620px; /*define o tamanho da imagem*/
+	margin-right: -11%; /*define a margem da direita*/
+}
+
+/*Define os parametros da caixa de login*/
+.login-container{
+	display: flex; /*torna o container do login flexivel para alinhamento*/
+	align-items: center; /*alinhar os itens flexiveis no centro do container*/
+	text-align: center; /*está alinhando o texto no centro*/
+	margin-left: -40%; /*define a margem da esquerda*/
+}
+
+form{
+	width: 360px;
+}
+
+/*imagem da caixa de cadastro, está definindo o tamanho*/
+/*.avatar{
+	width: 100px;
+}*/
+
+.sedf{
+	width: 100px;
+	margin: -60px 0;
+}
+
+.input-div div h5{
+	font-size: 0.2rem;
+}
+
+/*define os parametros da palavra 'Bem-Vindo'*/
+form h2{
+	font-size: 1.2rem; /*define o tamamnho da fonte*/
+	text-transform: uppercase; /*todas as letras em caixa alta*/
+	margin: 30px 0; /*margem superior e inferior 15px e margem a direita e esquerda 0*/
+	color: #333; /*define a cor da palavra*/
+	font-family: 'Montserrat', sans-serif;
+}
+
+form h6{
+	margin: -26px 0; /*margem superior e inferior e margem a direita e esquerda 0*/
+	color: #333; /*define a cor da letra*/
+	font-family: 'Montserrat', sans-serif; /*define a fonte da letra*/
+}
+
+form h3{
+	margin: 50px 0; /*margem superior e inferior e margem a direita e esquerda 0*/
+	color: #d9d9d9; /*define a cor da letra*/
+	font-family: 'Montserrat', sans-serif; /*define a fonte da letra*/
+}
+
+/*define os parametros de todos os elementos que estão dentro dessa class*/
+.input-div{
+	position: relative;
+	display: grid;
+	grid-template-columns: 7% 93%;
+	margin: 16px 0; /*margem superior e inferior 25px e margem a direita e esquerda 0*/
+	padding: 5px 0; /*define a distancia entre os elementos do container*/	
+	border-bottom: 2px solid #d9d9d9; /*define a linha abaixo do texto, cor e largura*/
+}
+
+.input-div.one{
+	margin-top: 0;
+}
+
+.input-div.four{
+	margin-bottom: 3px;
+}
+
+.input-div:after, .input-div:before{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background-color: #31DE40;
+	transition: .3s;
+}
+
+.input-div:after{
+	right: 50%;
+}
+
+.input-div:before{
+	left: 50%;
+}
+
+.input-div.focus .i i{
+	color: #31DE40;
+}
+
+.input-div.focus div h5{
+	top: -5px;
+	font-size: 15px;
+}
+
+.input-div.focus:after, .input-div.focus:before{
+	width: 50%;
+}
+ 
+ /*define tudo que está na classe fas fa-microphone*/
+.fas.fa-microphone{
+	color: #d9d9d9; /*cor dos microfones*/
+}
+
+/*define os parametros dos ícones*/
+.i{
+	display: flex; /*torna tudo que está na class i flexivel para alinhamento*/
+	justify-content: center;
+	align-items: center; /*alinha os intens no centro*/
+}
+
+/*define os icones*/
+.i i{
+	color: #d9d9d9; /*cor dos icones*/
+	transition: .3s;
+}
+
+/*define tudo que está dentro da tag div dentro da class input-div*/
+.input-div > div{
+	position: relative;
+	height: 45px;
+}
+
+/*define os parametros dos textos nas tags h5*/
+.input-div > div h5{
+	position: absolute; /*define a posição do elemento como absoluta de acordo com o posicionamento do 'pai'*/
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999; /*cor do texto ou palavra*/
+	font-size: 18px; /*tamanho da letra*/
+	transition: .3s;
+}
+
+/*define todos os elementos que estão ligados a classe input (os textos das caixas)*/
+.input{
+	position: absolute; /*define a posição do elemento como absoluta de acordo com o posicionamento do 'pai'*/
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border: none; /*sem borda*/
+	outline: none; /**/
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem; /*tamanho da letra*/
+	font-family: 'Poppins', sans-serif; /*fonte da letra*/
+	color: #555;
+}
+
+/*define o que está dentro da tag a (no caso o link 'já sou cadastrado'*/
+a{
+	display: block;
+	text-align: right; /*define a posição do texto, no caso o texto está a direita*/
+	text-decoration: none; /*define que o texto não é decorado*/
+	color: #999;/*define cor da letra*/
+	margin: 7px 0; /*margem superior e inferior 15px e margem a direita e esquerda 0*/
+	font-size: 0.9rem; /*tamanho da letra*/
+	transition: .3s;
+}
+
+/*define a cor de quem está dentro da tag a*/
+a:hover{
+	color: #31DE40; /*define a cor de transição do link*/
+}
+
+/*define os parametros do que está dentro da classe btn (no caso o botão de cadastrar)*/
+.btn{
+	display: block;
+	width: 100%;
+	height: 40px;
+	border-radius: 25px; /*arredonda as bordas do botão*/
+	margin: 1rem 0;
+	font-size: 1.2rem; /*tamanho da letra*/
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #16AA22, #31DE40, #16AA22); /*define a cor e o gradiente do botão*/
+	cursor: pointer;
+	color: #fff; /*define a cor da letra*/
+	/*text-transform: uppercase; /*todas as letras em caixa alta*/
+	font-family: 'Poppins', sans-serif; /*fonte da letra*/
+	background-size: 200%;
+	transition: .5s;
+}
+
+.btn:hover{
+	background-position: right;
+}
+
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 290px;
+	}
+
+	form h2{
+		font-size: 2.4rem;
+		margin: 8px 0;
+	}
+
+	.img.corousel img{
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.img.carousel{
+		display: none;
+	}
+
+	.container{
+		grid-template-columns: 1fr;
+	}
+
+	.fundo{
+		display: none;
+	}
+
+	.login-container{
+		justify-content: center;
+	}
+}
