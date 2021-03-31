@@ -2,6 +2,7 @@ package com.grad.SistemaVacinacao.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,23 +27,25 @@ public class CadastroController {
 
 	public String showUsuarioPage(ModelMap model) {
 
-		model.addAttribute("Cadastro", new CadastroUser()); // adicionando atributos a view
-		return "/Cadastro"; // Retorna a view (Cadastro.html) que deve ser chamada (.jsp é omitido)
+		model.addAttribute("Cadastro", new CadastroUser());
+		return "/Cadastro";
 	}
 
-	@RequestMapping(value = "/saveUsuario", method = RequestMethod.POST) // mapeamento da URL, requisição POST
-	public String save(ModelMap model, CadastroUser cadastroUser, BindingResult result) { // BindingResult auxilia na
-																							// validação
-		// durante o processo de binding, caso
-		// haja algum erro,é redirecionado pra
-		// pagina indicada
+	@RequestMapping(value = "/saveUsuario", method = RequestMethod.POST)
+	public String save(ModelMap model, CadastroUser cadastroUser, BindingResult result) {
+
 		if (result.hasErrors()) {
-			return "/indexLogin"; // Retorna a view (Cadastro.jsp) que deve ser chamada (.jsp é omitido)
+			return "/indexLogin";
 		}
 
-		servico.save(cadastroUser); // chama a classe de servico e salva o usuario cadastrado
+		servico.save(cadastroUser);
 
-		return "redirect:/Cadastro"; // Faz redirecionamento da tela de cadastro pra tela de login (.jsp é omitido)
+		return "redirect:/Cadastro";
+	}
+
+	@GetMapping({ "/", "/home" })
+	public String home(Model model) {
+		return "home";
 	}
 
 }
