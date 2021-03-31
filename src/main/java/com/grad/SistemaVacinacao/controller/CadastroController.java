@@ -22,30 +22,35 @@ public class CadastroController {
 	@Autowired
 	CadastroService servico;
 
-	@RequestMapping(value = "/Cadastro", method = RequestMethod.GET)
+	@RequestMapping(value = "/cadastro", method = RequestMethod.GET)
 	// requisição GET -> transforma em action
 
 	public String showUsuarioPage(ModelMap model) {
 
-		model.addAttribute("Cadastro", new CadastroUser());
-		return "/Cadastro";
+		model.addAttribute("cadastro", new CadastroUser());
+		return "/cadastro";
 	}
 
 	@RequestMapping(value = "/saveUsuario", method = RequestMethod.POST)
 	public String save(ModelMap model, CadastroUser cadastroUser, BindingResult result) {
 
 		if (result.hasErrors()) {
-			return "/indexLogin";
+			return "/login";
 		}
 
 		servico.save(cadastroUser);
 
-		return "redirect:/Cadastro";
+		return "redirect:/cadastro";
 	}
 
 	@GetMapping({ "/", "/home" })
 	public String home(Model model) {
 		return "home";
+	}
+	
+	@GetMapping({ "/login" })
+	public String login(Model model) {
+		return "login";
 	}
 
 }
