@@ -29,6 +29,19 @@ public class UsuarioController {
     @Autowired
     private UsuarioValidator userValidator;
 
+    @GetMapping("/login")
+    public String login(Model model, String error, String logout) {
+        if (error != null)
+            model.addAttribute("erro", "Usuario ou senha invalida.");
+
+        if (logout != null)
+            model.addAttribute("message", "Login Bem-Sucedido.");
+
+        return "login";
+    }
+
+    
+    
     @GetMapping("/cadastro")
     public String cadastro(Model model) {
         model.addAttribute("userForm", new Usuario());
@@ -51,16 +64,6 @@ public class UsuarioController {
         return "redirect:/home";
     }
 
-    @GetMapping("/login")
-    public String login(Model model, String error, String logout) {
-        if (error != null)
-            model.addAttribute("erro", "Usuario ou senha invalida.");
-
-        if (logout != null)
-            model.addAttribute("message", "Login Bem-Sucedido.");
-
-        return "login";
-    }
 
     @GetMapping({"/", "/home"})
     public String home(Model model) {

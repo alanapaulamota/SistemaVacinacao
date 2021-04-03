@@ -25,19 +25,19 @@ public class UsuarioValidator implements Validator {
 
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
 		if (user.getUsername().length() < 6 || user.getUsername().length() > 32) {
-			errors.rejectValue("username", "Size.userForm.username");
+			errors.rejectValue("username", "Username tamanho incorreto");
 		}
 		if (userService.findByUsername(user.getUsername()) != null) {
-			errors.rejectValue("username", "Duplicate.userForm.username");
+			errors.rejectValue("username", "Username Duplicado");
 		}
 
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
 		if (user.getSenha().length() < 8 || user.getSenha().length() > 32) {
-			errors.rejectValue("password", "Size.userForm.password");
+			errors.rejectValue("senha", "Senha tamanho incorreto");
 		}
 
 		if (!user.getConfirmaSenha().equals(user.getSenha())) {
-			errors.rejectValue("passwordConfirm", "Diff.userForm.passwordConfirm");
+			errors.rejectValue("Confirma senha", "Digite a senha correta");
 		}
 	}
 }
