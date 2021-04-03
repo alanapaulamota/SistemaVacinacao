@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="css/estilocadastrolocalvacina.css">
+<link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/7785zegotao.ico">
+
+<title>acinas Cadastradas</title>
+</head>
+<body>
+	<h1>Lista de Vacinas Cadastradas</h1>
+	<h3>
+		<a href="/cadastroVacina"></a>
+	</h3>
+	<div th:each="vacina : ${vacinas}">
+	<div class="row">
+	<p><span th:text="{vacina.nome)"></span></p>
+		<p><span th:text="{vacina.tipo)"></span></p>
+		<p><span th:text="{vacina.preço)"></span></p>
+		<p><span th:text="{vacina.quantidade)"></span></p>
+		<p><span th:text="{vacina.fabricante)"></span></p>
+	
+	
+	
+	</div>
+
+
+
+</body>

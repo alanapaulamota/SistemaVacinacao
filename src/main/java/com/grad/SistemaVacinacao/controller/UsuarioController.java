@@ -28,6 +28,8 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioValidator userValidator;
+    
+    
 
     @GetMapping("/login")
     public String login(Model model, String error, String logout) {
