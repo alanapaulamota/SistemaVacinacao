@@ -56,128 +56,129 @@
 
 
 	<div class="container-fluid" style="width: 90%">
-		<div class="row">
-			<div class="col-md-12 ">
-				<h1>Cadastro</h1>
-				<br>
-				<div class="formsix-pos">
-					<div class="form-group">
-						<input type="text" class="form-control" required="" id="cadnome"
-							placeholder="Nome Completo" style="font-family: arial">
-					</div>
-				</div>
-
-				<form>
-					<div class="form-row">
-						<div class="col">
-							<input type="text" class="form-control" placeholder="E-mail"
-								style="font-family: arial">
-						</div>
-						<div class="col">
-							<input type="text" class="form-control" placeholder="Telefone"
-								style="font-family: arial">
+		<form:form method="POST" modelAttribute="userForm">
+			<div class="row">
+				<div class="col-md-12 ">
+					<h1>Cadastro</h1>
+					<br>
+					<div class="formsix-pos">
+						<div class="form-group">
+							<input type="text" class="form-control" required="" id="cadnome"
+								placeholder="Nome Completo" style="font-family: arial">
 						</div>
 					</div>
-				</form>
 
-				<br>
-
-				<form>
-					<div class="form-row">
-						<div class="col">
-							<input type="text" class="form-control" placeholder="CPF"
-								style="font-family: arial">
+					<form>
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control" placeholder="E-mail"
+									style="font-family: arial">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control" placeholder="Telefone"
+									style="font-family: arial">
+							</div>
 						</div>
-						<div class="col">
-							<input type="text" class="form-control" placeholder="RG"
-								style="font-family: arial">
-						</div>
-					</div>
-				</form>
-
-				<br>
-
-				<form>
-					<div class="form-row">
-						<div class="col">
-							<input type="text" class="form-control"
-								placeholder="Data de Nascimento" style="font-family: arial">
-						</div>
-						<div class="col">
-							<input type="text" class="form-control" placeholder="Sexo"
-								style="font-family: arial">
-						</div>
-					</div>
-				</form>
-
-				<br>
-
-				<form>
-					<div class="form-row">
-						<div class="col">
-							<input type="text" class="form-control" placeholder="Endereço"
-								style="font-family: arial">
-						</div>
-						<div class="col">
-							<input type="text" class="form-control" placeholder="Complemento"
-								style="font-family: arial">
-						</div>
-					</div>
-				</form>
-
-				<br>
-
-				<form>
-					<div class="form-row">
-						<div class="col">
-							<input type="text" class="form-control" placeholder="CEP"
-								style="font-family: arial">
-						</div>
-						<div class="col">
-							<input type="text" class="form-control" placeholder="Cartão SUS"
-								style="font-family: arial">
-						</div>
-					</div>
-				</form>
-
-				<br>
-
-				<form>
-					<div class="form-row">
-						<div class="col">
-							<input type="text" class="form-control" placeholder="Nome da Mãe"
-								style="font-family: arial">
-						</div>
-						<div class="col">
-							<input type="text" class="form-control" placeholder="Nome do Pai"
-								style="font-family: arial">
-						</div>
-					</div>
-				</form>
-
-				<br>
-
-				<form>
-					<div class="form-row">
-						<div class="col">
-							<input type="text" class="form-control" placeholder="Senha"
-								style="font-family: arial">
-						</div>
-						<div class="col">
-							<input type="text" class="form-control"
-								placeholder="Confirme sua Senha" style="font-family: arial">
-						</div>
-					</div>
+					</form>
 
 					<br>
 
-					<button type="button" class="btn btn-primary btn-lg"
-						style="background-color: #4E598F; border: transparent;">Salvar</button>
-				</form>
+					<form>
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control" placeholder="CPF"
+									style="font-family: arial">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control" placeholder="RG"
+									style="font-family: arial">
+							</div>
+						</div>
+					</form>
 
+					<br>
 
+					<form>
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control"
+									placeholder="Data de Nascimento" style="font-family: arial">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control" placeholder="Sexo"
+									style="font-family: arial">
+							</div>
+						</div>
+					</form>
+
+					<br>
+
+					<form>
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control" placeholder="Endereço"
+									style="font-family: arial">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control"
+									placeholder="Complemento" style="font-family: arial">
+							</div>
+						</div>
+					</form>
+
+					<br>
+
+					<form>
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control" placeholder="CEP"
+									style="font-family: arial">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control" placeholder="Cartão SUS"
+									style="font-family: arial">
+							</div>
+						</div>
+					</form>
+
+					<br>
+
+					<form>
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control"
+									placeholder="Nome da Mãe" style="font-family: arial">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control"
+									placeholder="Nome do Pai" style="font-family: arial">
+							</div>
+						</div>
+					</form>
+
+					<br>
+
+					<form>
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control" placeholder="Senha"
+									style="font-family: arial">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control"
+									placeholder="Confirme sua Senha" style="font-family: arial">
+							</div>
+						</div>
+
+						<br>
+
+						<button type="button" class="btn btn-primary btn-lg"
+							style="background-color: #4E598F; border: transparent;">Salvar</button>
+					</form>
+				</div>
 			</div>
-		</div>
+		</form:form>
+
 	</div>
 
 	<br>

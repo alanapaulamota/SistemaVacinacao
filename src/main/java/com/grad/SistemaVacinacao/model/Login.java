@@ -27,25 +27,14 @@ import lombok.NoArgsConstructor;
 public class Login implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id // Anotação para indicar que o campo id é identificados da entidade
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // Anotação indica que o valor do id será gerado pelo banco de
-														// dados
-	@Column // Anotação que define uma coluna no banco de dados
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "cpf", length = 11, nullable = false, unique = true) // Anotação que define uma coluna no banco de
-																		// dados cujo o valor do atributo pode ter no
-																		// maximo 11 caracteres, não pode ser nulo e é
-																		// unico
-	@NotBlank // Não pode ser nulo, inexistente ou branco
 	private String cpf;
 
-	@Column(length = 60, nullable = false) // Anotação que define uma coluna no banco de dados cujo o valor do atributo
-	// pode ter no maximo 60 caracteres
-	@NotBlank // Não pode ser nulo, inexistente ou branco
 	private String senha;
 
-	
 	@Override
 	public int hashCode() {
 		return Objects.hash(cpf, id, senha);
