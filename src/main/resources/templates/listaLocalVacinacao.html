@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="css/estilocadastrolocallocalVacinacao.css">
+<link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/7785zegotao.ico">
+
+<title>Locais de localVacinacaocao Cadastradas</title>
+</head>
+<body>
+	<h1>Lista Locais de localVacinacaocao Cadastradas</h1>
+	<h3>
+		<a href="/cadastrolocalVacinacao"></a>
+	</h3>
+	<div th:each="localVacinacao : ${localVacinacao}">
+		<div class="row">
+			<p>
+				<span th:text="{localVacinacao.nome)"></span>
+			</p>
+			<p>
+				<span th:text="{localVacinacao.endereco)"></span>
+			</p>
+			<p>
+				<span th:text="{localVacinacao.complemento)"></span>
+			</p>
+			<p>
+				<span th:text="{localVacinacao.cep)"></span>
+			</p>
+			<p>
+				<span th:text="{localVacinacao.telefone)"></span>
+			</p>
+
+
+
+		</div>
+</body>

@@ -5,13 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.grad.SistemaVacinacao.model.Login;
 
-/* Classe Repositorio
-*
-*  
-*
-*Por extender a classe JpaRepository tem acesso a metodos do Spring Data ja prontos, por exemplo: CRUD, find all...
-*/
-
 @Repository
 public interface LoginRepository extends JpaRepository<Login, Long> {
 

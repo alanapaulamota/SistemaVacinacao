@@ -3,12 +3,14 @@ package com.grad.SistemaVacinacao.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity(name = "vacina")
 public class Vacina implements Serializable {
@@ -23,17 +25,16 @@ public class Vacina implements Serializable {
 
 	private String tipo;
 
-	private BigDecimal preço;
-
-	private Integer quantidade;
-
 	private String descricao;
 
 	private String fabricante;
 
+	@ManyToMany
+	private Set<EstoqueVacina> estoqueVacinas;
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(descricao, fabricante, id, nome, preço, quantidade, tipo);
+		return Objects.hash(descricao, fabricante, id, nome, tipo);
 	}
 
 	@Override
@@ -46,9 +47,7 @@ public class Vacina implements Serializable {
 		}
 		Vacina other = (Vacina) obj;
 		return Objects.equals(descricao, other.descricao) && Objects.equals(fabricante, other.fabricante)
-				&& Objects.equals(id, other.id) && Objects.equals(nome, other.nome)
-				&& Objects.equals(preço, other.preço) && Objects.equals(quantidade, other.quantidade)
-				&& Objects.equals(tipo, other.tipo);
+				&& Objects.equals(id, other.id) && Objects.equals(nome, other.nome) && Objects.equals(tipo, other.tipo);
 	}
 
 	@Override

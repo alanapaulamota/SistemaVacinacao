@@ -3,13 +3,11 @@ package com.grad.SistemaVacinacao.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,13 +29,13 @@ public class Login implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String cpf;
+	private String username;
 
 	private String senha;
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(cpf, id, senha);
+		return Objects.hash(username, id, senha);
 	}
 
 	@Override
@@ -49,13 +47,13 @@ public class Login implements Serializable {
 			return false;
 		}
 		Login other = (Login) obj;
-		return Objects.equals(cpf, other.cpf) && Objects.equals(id, other.id) && Objects.equals(senha, other.senha);
+		return Objects.equals(username, other.username) && Objects.equals(id, other.id) && Objects.equals(senha, other.senha);
 	}
 
 	// Gerando toString
 	@Override
 	public String toString() {
-		return "Login [id=" + id + ", cpf=" + cpf + "]";
+		return "Login [id=" + id + ", username=" + username + "]";
 	}
 
 	// GERANDO GETTERS E SETTER COM LOMBOK
