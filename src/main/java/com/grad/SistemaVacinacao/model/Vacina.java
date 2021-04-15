@@ -23,12 +23,15 @@ public class Vacina implements Serializable {
 
 	private String nome;
 
+	//TODO criar classe tipo ou criar enum ....
 	private String tipo;
 
 	private String descricao;
-
+	
+	//TODO normalizar???
 	private String fabricante;
 
+	@Deprecated
 	@ManyToMany
 	private Set<EstoqueVacina> estoqueVacinas;
 

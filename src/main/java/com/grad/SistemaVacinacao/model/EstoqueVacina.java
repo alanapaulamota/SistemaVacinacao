@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Deprecated
 @Entity(name = "Estoque_vacina")
 public class EstoqueVacina {
 

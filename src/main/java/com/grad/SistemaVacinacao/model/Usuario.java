@@ -63,6 +63,8 @@ public class Usuario implements Serializable {
 	private String senha;
 
 	private String confirmaSenha;
+	
+	private CarteiraVacinacao carteiraVacinacao;
 
 	@ManyToMany
 	private Set<Role> roles;

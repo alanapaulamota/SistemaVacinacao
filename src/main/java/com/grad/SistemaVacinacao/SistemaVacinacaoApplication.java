@@ -10,4 +10,9 @@ public class SistemaVacinacaoApplication {
 		SpringApplication.run(SistemaVacinacaoApplication.class, args);
 	}
 
+	
+	//TODO: https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
+	// - nome de pacote
+	// - EstoqueVacina --> preço ???
+	
 }

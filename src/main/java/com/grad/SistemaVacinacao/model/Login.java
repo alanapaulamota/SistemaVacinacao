@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Deprecated
 @Entity // Anotação que indica que a classe é uma entidade do banco de dados
 @Table(name = "login") // Anotação indica nome da tabela a ser criada no banco de dados
 public class Login implements Serializable {

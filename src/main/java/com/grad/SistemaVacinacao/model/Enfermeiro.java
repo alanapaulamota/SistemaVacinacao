@@ -9,6 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//TODO fluxo
+//// TELA INICIAL (index) com alguma info ... publica ----> link de login/logout
+                                                     // ----> cadastrar etc ...
+//TODO incluir remeber me
+
+
 @Table(name = "enfermeiro")
 public class Enfermeiro implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -26,6 +32,7 @@ public class Enfermeiro implements Serializable {
 
 	private String cpf;
 
+	//TODO minuscula
 	private String RG;
 
 	private String endereco;
