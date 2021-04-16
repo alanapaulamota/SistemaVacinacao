@@ -1,8 +1,4 @@
-# Spring Security Login Tutorial
-
-### Tutorial / Full Information
-
-https://medium.com/@gustavo.ponce.ch/spring-boot-spring-mvc-spring-security-mysql-a5d8545d837d
+### maven
 
 1. mvn clean install
 2. java -jar target/login-tutorial.jar
@@ -14,3 +10,16 @@ https://medium.com/@gustavo.ponce.ch/spring-boot-spring-mvc-spring-security-mysq
 - mvn clean install
 - docker build --tag login-tutorial .
 - docker run --net=host login-tutorial 
+
+### Possíveis instalações
+1 - eclipse (https://spring.io/tools)
+2 - lombok (https://projectlombok.org/download)
+3 - docker (https://www.docker.com/get-started)
+3 - node js (https://nodejs.org/en/)
+...
+
+### Startar a aplicação no repositório local do projeto
+- ./run-sistemavacinacao.sh
+
+### Startar o mysql (docker) no repositório local do projeto
+- ./run-mysql.sh
