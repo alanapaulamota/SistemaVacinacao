@@ -1,0 +1,31 @@
+.validation-message {
+	font-style: normal;
+	font-size: 12px;
+	color: #FF1C19;
+}
+
+.btn-warning {
+	color: #fff;
+	background-color: #4E598F !important;
+	/*     border-color: #eea236; */
+}
+
+.btn-login {
+	/* 	color: #fff; */
+	/* 	background-color: rgba(78, 94, 91, 0.41)!important; */
+	width: 15%;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	margin-left: 30%;
+	font-weight: bolder;
+}
+
+body {
+	background-color: rgba(196, 196, 196, 0.63) !important;
+	margin: 0px;
+	padding: 0px;
+}
