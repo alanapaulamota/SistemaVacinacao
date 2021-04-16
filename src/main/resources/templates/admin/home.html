@@ -11,6 +11,15 @@
 	crossorigin="anonymous">
 
 <title>Bem-Vindo!</title>
+
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -32,8 +41,8 @@
 
 				<!--1 início-->
 				<br>
-				<li class="nav-item disabled">&nbsp&nbsp<a href="#"
-					style="color: #ffff; font-family: arial; font-size: 1.25em;">Home</a>&nbsp&nbsp&nbsp&nbsp
+				<li class="nav-item">&nbsp&nbsp<a href="#"
+					style="color: #ffff; font-family: arial; font-size: 1.25em;">Sobre</a>&nbsp&nbsp&nbsp&nbsp
 				</li>
 
 				<!--2 agendamento-->
@@ -41,55 +50,54 @@
 					style="color: #ffff; font-family: arial; font-size: 1.25em;">Agendamento</a>&nbsp&nbsp&nbsp&nbsp
 				</li>
 
-				<!--3 Altere seus Dados-->
-				<li class="nav-item">&nbsp&nbsp<a href="/AltDados.html"
-					style="color: #ffff; font-size: 1.25em; font-family: arial;">Altere
-						seus dados</a>&nbsp&nbsp&nbsp&nbsp
-				</li>
-
 				<!--4 Carteira de Vacinação-->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="dropdownSite"
 					data-toggle="dropdown"
 					style="font-size: 1.25em; padding-top: 0px;; color: #ffff; font-family: arial;">&nbsp
-						Carteira de vacinação &nbsp</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="/carteira.html">Carteira de
-							Vacinação</a> <a class="dropdown-item" href="/carteirainfantil.html">Carteira
-							de Vacinação Infantil</a>
-					</div></li>
-
-			</ul>
-
-
-			<ul class="navbar-nav ml-auto">
-
-				<!--Sobre-->
-				<li class="nav-item">
-					<button class="btn fa fa-question-circle"
-						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;">
-						<a href="sobre.html" style="color: #ffff; font-family: arial;">
-							Sobre</a>
-					</button>
+						Carteira de vacinação &nbsp</a> <!--3 Altere seus Dados-->
+				<li class="nav-item">&nbsp&nbsp<a href="/AltDados.html"
+					style="color: #ffff; font-size: 1.25em; font-family: arial;">Altere
+						seus dados</a>&nbsp&nbsp&nbsp&nbsp
 				</li>
 
-				<!--Contate-nos-->
-				<li class="nav-item">
-					<button class="btn fa fa-phone-square"
-						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;">
-						<a href="faleconosco.html"
-							style="color: #ffff; font-family: arial;"> Contate-nos</a>
-					</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="/carteira.html">Carteira de
+						Vacinação</a> <a class="dropdown-item" href="/carteirainfantil.html">Carteira
+						de Vacinação Infantil</a>
+				</div>
 				</li>
-				<li class="nav-item">
+				
+					<li class="nav-item">
 
 					<form th:action="@{/logout}" method="get">
-						<button class="btn btn-md btn-danger btn-block"
+						<button class="btn btn-md btn-warning btn-block"
 							name="registration" type="Submit">Logout</button>
 				</li>
-				</form>
 
 			</ul>
+
+
+<!-- 			<ul class="navbar-nav ml-auto"> -->
+
+<!-- 				Sobre -->
+<!-- 				<li class="nav-item"> -->
+<!-- 					<button class="btn fa fa-question-circle" -->
+<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
+<!-- 						<a href="sobre.html" style="color: #ffff; font-family: arial;"> -->
+<!-- 							Sobre</a> -->
+<!-- 					</button> -->
+<!-- 				</li> -->
+
+<!-- 				<li class="nav-item"> -->
+
+<!-- 					<form th:action="@{/logout}" method="get"> -->
+<!-- 						<button class="btn btn-md btn-warning btn-block" -->
+<!-- 							name="registration" type="Submit">Logout</button> -->
+<!-- 				</li> -->
+<!-- 				</form> -->
+
+<!-- 			</ul> -->
 
 		</div>
 
@@ -97,9 +105,9 @@
 	<!-- Corpo -->
 	<br>
 	<br>
-      <div class="panel-heading">
-                <span th:utext="${userName}"></span>
-            </div>
+	<div class="panel-heading">
+		<span th:utext="${userName}"></span>
+	</div>
 	<!--div vídeo-->
 	<div class="container-fluid" style="width: 100%; text-align: center;">
 		<section class="video">
@@ -168,8 +176,7 @@
 				</div>
 			</div>
 		</div>
-		<br>
-		<br>
+		<br> <br>
 	</div>
 
 	<!--div 2-->
@@ -218,8 +225,7 @@
 				</div>
 			</div>
 		</div>
-		<br>
-		<br>
+		<br> <br>
 	</div>
 
 	<!--div 3-->
@@ -256,8 +262,7 @@
 				</div>
 			</div>
 		</div>
-		<br>
-		<br>
+		<br> <br>
 	</div>
 
 	<!--div 4-->
@@ -284,10 +289,14 @@
 				<a href="URL DO FACEBOOK"><img border="0" src="images/gotao.png" /></a>
 			</div>
 		</div>
-		<br>
-		<br>
+		<br> <br>
 	</div>
 
+	<!-- Section contato-->
+	<section class="contato">
+		<h1>Ainda tem dúvidas?</h1>
+		<h3>Entre em contato conosco</h3>
+	</section>
 
 	<!-- Rodapé-->
 	<div class="container-fluid pt-3 navbar-fixed-bottom"

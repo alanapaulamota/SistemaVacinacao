@@ -42,13 +42,13 @@ public class LoginController {
 		User userExists = userService.findUserByUserName(user.getUserName());
 		if (userExists != null) {
 			bindingResult.rejectValue("userName", "error.user",
-					"There is already a user registered with the user name provided");
+					"Já existe um usuário registrado com o nome de usuário fornecido");
 		}
 		if (bindingResult.hasErrors()) {
 			modelAndView.setViewName("registration");
 		} else {
 			userService.saveUser(user);
-			modelAndView.addObject("successMessage", "User has been registered successfully");
+			modelAndView.addObject("successMessage", "O usuário foi registrado com sucesso");
 			modelAndView.addObject("user", new User());
 			modelAndView.setViewName("registration");
 
@@ -63,7 +63,7 @@ public class LoginController {
 		User user = userService.findUserByUserName(auth.getName());
 		modelAndView.addObject("userName", "Bem-Vindo " + user.getUserName() + "/" + user.getName() + " "
 				+ user.getLastName() + " (" + user.getEmail() + ")");
-		modelAndView.addObject("adminMessage", "Content Available Only for Users with Admin Role");
+		modelAndView.addObject("adminMessage", "Conteúdo disponível apenas para usuários com função administrativa");
 		modelAndView.setViewName("admin/home");
 		return modelAndView;
 	}

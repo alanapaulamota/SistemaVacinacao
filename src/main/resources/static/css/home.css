@@ -1,5 +1,25 @@
 .admin-message-text {
-    font-style: normal;
-    font-size: 22px;
-    color: #004080;
+	font-style: normal;
+	font-size: 22px;
+	color: #004080;
+}
+
+.btn-warning {
+	background-color: #4E598F !important;
+	display: inline-block;
+	
+}
+
+
+body {
+	background-color: rgba(196, 196, 196, 0.63) !important;
+	margin: 0px;
+	padding: 0px;
+}
+
+.contato{
+	background: #4E598F;
+	height: 30vw;
+	color:#fff;
+	
 }
