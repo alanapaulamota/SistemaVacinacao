@@ -1,146 +1,8 @@
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="en" xmlns="http://www.w3.org/1999/xhtml" -->
-<!-- 	xmlns:th="http://www.thymeleaf.org"> -->
-<!-- <head> -->
-<!-- <title>Cadastre-se</title> -->
-<!-- <link rel="stylesheet" type="text/css" -->
-<!-- 	th:href="@{/css/registration.css}" /> -->
-<!-- <link rel="stylesheet" -->
-<!-- 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-<!-- <script -->
-<!-- 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-<!-- <script -->
-<!-- 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-<!-- </head> -->
-<!-- <body> -->
-
-<!-- 	<!--Navbar da P�gina-->
--->
-<!-- 	<nav class="navbar navbar-expand-lg navbar-dark justify-content-end" -->
-<!-- 		style="height: 80px; background-color: #39bcb6;"> -->
-<!-- 		<!--Imagem Logo SNV-->
--->
-<!-- 		<!--<a class="navbar-brand" href="#"> -->
-<!--         <img src="img/zegotao.png" width="35" height="80" alt="Logo SNV" title="Logo SNV"> -->
-<!--       </a>-->
--->
-<!-- 		<form method="POST" modelAttribute="userForm" class="form-signin"> -->
-
-<!-- 			<!--navbar-->
--->
-<!-- 			<div class="nav justify-content-end" id="navbarSite"> -->
-<!-- 				<ul class="nav justify-content-end "> -->
-
-<!-- 					Sobre -->
-<!-- 					<li class="nav-item"> -->
-<!-- 						<button class="btn fa fa-question-circle" -->
-<!-- 							style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
-<!-- 							<a href="sobre.html" style="color: #ffff; font-family: arial;"> -->
-<!-- 								Sobre</a> -->
-<!-- 						</button> -->
-<!-- 					</li> -->
-
-<!-- 					Contate-nos -->
-<!-- 					<li class="nav-item"> -->
-<!-- 						<button class="btn fa fa-phone-square" -->
-<!-- 							style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
-<!-- 							<a href="faleconosco.html" -->
-<!-- 								style="color: #ffff; font-family: arial;"> Contate-nos</a> -->
-<!-- 						</button> -->
-<!-- 					</li> -->
-
-<!-- 					<li class="nav-item"> -->
-
-<!-- 						<form th:action="@{/login}" method="get"> -->
-<!-- 							<button class="btn btn-md btn-login btn-block" type="Submit">Voltar -->
-<!-- 								pra página Login</button> -->
-<!-- 						</form> -->
-<!-- 				</ul> -->
-<!-- 			</div> -->
-<!-- 	</nav> -->
-
-
-<!-- 	<div class="container"> -->
-<!-- 		<div class="row"> -->
-<!-- 			<div class="col-md-6 col-md-offset-3"> -->
-<!-- 				<form autocomplete="off" action="#" th:action="@{/registration}" -->
-<!-- 					th:object="${user}" method="post" class="form-horizontal" -->
-<!-- 					role="form"> -->
-<!-- 					<h2>Cadastro</h2> -->
-<!-- 					<div class="form-group"> -->
-<!-- 						<div class="col-sm-9"> -->
-<!-- 							<label th:if="${#fields.hasErrors('name')}" th:errors="*{name}" -->
-<!-- 								class="validation-message"></label> <input type="text" -->
-<!-- 								th:field="*{name}" placeholder="Name" class="form-control" /> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-
-<!-- 					<div class="form-group"> -->
-<!-- 						<div class="col-sm-9"> -->
-<!-- 							<label th:if="${#fields.hasErrors('lastName')}" -->
-<!-- 								th:errors="*{lastName}" class="validation-message"></label> <input -->
-<!-- 								type="text" th:field="*{lastName}" placeholder="Last Name" -->
-<!-- 								class="form-control" /> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<div class="form-group"> -->
-<!-- 						<div class="col-sm-9"> -->
-<!-- 							<input type="text" th:field="*{email}" placeholder="Email" -->
-<!-- 								class="form-control" /> <label -->
-<!-- 								th:if="${#fields.hasErrors('email')}" th:errors="*{email}" -->
-<!-- 								class="validation-message"></label> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<div class="form-group"> -->
-<!-- 						<div class="col-sm-9"> -->
-<!-- 							<input type="text" th:field="*{userName}" placeholder="User Name" -->
-<!-- 								class="form-control" /> <label -->
-<!-- 								th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}" -->
-<!-- 								class="validation-message"></label> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<div class="form-group"> -->
-<!-- 						<div class="col-sm-9"> -->
-<!-- 							<input type="password" th:field="*{password}" -->
-<!-- 								placeholder="Password" class="form-control" /> <label -->
-<!-- 								th:if="${#fields.hasErrors('password')}" th:errors="*{password}" -->
-<!-- 								class="validation-message"></label> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-
-<!-- 					<div class="form-group"> -->
-<!-- 						<div class="col-sm-9"> -->
-<!-- 							<button type="submit" class="btn btn-primary btn-block">Registrar -->
-<!-- 								Usuário</button> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-
-<!-- 					<h2> -->
-<!-- 						<span class="text-success" th:utext="${successMessage}"></span> -->
-<!-- 					</h2> -->
-
-<!-- 				</form> -->
-
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 		<!-- Rodapé-->
--->
-<!-- 		<div class="container-fluid pt-3 navbar-fixed-bottom" -->
-<!-- 			id="container-rodape" style="background-color: #39bcb6; color: white"> -->
-<!-- 			<div class="row"> -->
-<!-- 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" -->
-<!-- 					style="font-size: 13px; text-align: center"> -->
-<!-- 					<p>SNV 2021 © Todos os direitos reservados</p> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- </body> -->
-<!-- </html> -->
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Registration Form</title>
+<title>Cadastre-se</title>
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/registration.css}" />
 <link rel="stylesheet"
@@ -151,10 +13,48 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<form th:action="@{/}" method="get">
-		<button class="btn btn-md btn-warning btn-block" type="Submit">Go
-			To Login Page</button>
-	</form>
+
+	<!--Navbar da P�gina-->
+	<nav class="navbar navbar-expand-lg navbar-dark justify-content-end"
+		style="height: 80px; background-color: #39bcb6;">
+		<!--Imagem Logo SNV-->
+		<!--<a class="navbar-brand" href="#">
+        <img src="img/zegotao.png" width="35" height="80" alt="Logo SNV" title="Logo SNV">
+      </a>-->
+		<form method="POST" modelAttribute="userForm" class="form-signin">
+
+			<!--navbar-->
+			<div class="nav justify-content-end" id="navbarSite">
+				<ul class="nav justify-content-end ">
+
+					<!--Sobre-->
+					<li class="nav-item">
+						<button class="btn fa fa-question-circle"
+							style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;">
+							<a href="sobre.html" style="color: #ffff; font-family: arial;">
+								Sobre</a>
+						</button>
+					</li>
+
+					<!--Contate-nos-->
+					<li class="nav-item">
+						<button class="btn fa fa-phone-square"
+							style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;">
+							<a href="faleconosco.html"
+								style="color: #ffff; font-family: arial;"> Contate-nos</a>
+						</button>
+					</li>
+
+					<li class="nav-item">
+
+						<form th:action="@{/login}" method="get">
+							<button class="btn btn-md btn-login btn-block" type="Submit">Voltar
+								pra página Login</button>
+						</form>
+				</ul>
+			</div>
+	</nav>
+
 
 	<div class="container">
 		<div class="row">
@@ -162,7 +62,7 @@
 				<form autocomplete="off" action="#" th:action="@{/registration}"
 					th:object="${user}" method="post" class="form-horizontal"
 					role="form">
-					<h2>Registration Form</h2>
+					<h2>Cadastro</h2>
 					<div class="form-group">
 						<div class="col-sm-9">
 							<label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
@@ -206,8 +106,8 @@
 
 					<div class="form-group">
 						<div class="col-sm-9">
-							<button type="submit" class="btn btn-primary btn-block">Register
-								User</button>
+							<button type="submit" class="btn btn-primary btn-block">Registrar
+								Usuário</button>
 						</div>
 					</div>
 
@@ -216,9 +116,17 @@
 					</h2>
 
 				</form>
+
 			</div>
 		</div>
-	</div>
-
+		<!-- Rodapé-->
+		<div class="container-fluid pt-3 navbar-fixed-bottom"
+			id="container-rodape" style="background-color: #39bcb6; color: white">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+					style="font-size: 13px; text-align: center">
+					<p>SNV 2021 © Todos os direitos reservados</p>
+				</div>
+			</div>
 </body>
 </html>
