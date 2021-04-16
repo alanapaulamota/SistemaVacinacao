@@ -12,11 +12,11 @@
 - docker run --net=host login-tutorial 
 
 ### Possíveis instalações
-1 - eclipse (https://spring.io/tools)
-2 - lombok (https://projectlombok.org/download)
-3 - docker (https://www.docker.com/get-started)
-3 - node js (https://nodejs.org/en/)
-...
+- eclipse (https://spring.io/tools)
+- lombok (https://projectlombok.org/download)
+- docker (https://www.docker.com/get-started) 
+- node js (https://nodejs.org/en/)
+- ...
 
 ### Startar a aplicação no repositório local do projeto
 - ./run-sistemavacinacao.sh
