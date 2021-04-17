@@ -41,9 +41,10 @@
 
 				<!--1 início-->
 				<br>
-				<li class="nav-item">&nbsp&nbsp<a href="#"
+				<li class="nav-item">&nbsp&nbsp<a href="/.html"
 					style="color: #ffff; font-family: arial; font-size: 1.25em;">Sobre</a>&nbsp&nbsp&nbsp&nbsp
 				</li>
+
 
 				<!--2 agendamento-->
 				<li class="nav-item">&nbsp&nbsp<a href="#"
@@ -55,49 +56,52 @@
 					class="nav-link dropdown-toggle" href="#" id="dropdownSite"
 					data-toggle="dropdown"
 					style="font-size: 1.25em; padding-top: 0px;; color: #ffff; font-family: arial;">&nbsp
-						Carteira de vacinação &nbsp</a> <!--3 Altere seus Dados-->
-				<li class="nav-item">&nbsp&nbsp<a href="/AltDados.html"
-					style="color: #ffff; font-size: 1.25em; font-family: arial;">Altere
-						seus dados</a>&nbsp&nbsp&nbsp&nbsp
-				</li>
-
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="/carteira.html">Carteira de
-						Vacinação</a> <a class="dropdown-item" href="/carteirainfantil.html">Carteira
-						de Vacinação Infantil</a>
-				</div>
-				</li>
-				
-					<li class="nav-item">
-
-					<form th:action="@{/logout}" method="get">
-						<button class="btn btn-md btn-warning btn-block"
-							name="registration" type="Submit">Logout</button>
-				</li>
-
-			</ul>
+						Carteira de vacinação &nbsp</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="/carteira.html">Carteira de
+							Vacinação</a> <a class="dropdown-item" href="/carteirainfantil.html">Carteira
+							de Vacinação Infantil</a></li>
+		</div>
 
 
-<!-- 			<ul class="navbar-nav ml-auto"> -->
+		<!--3 Altere seus Dados-->
+		<li class="nav-item">&nbsp&nbsp<a href="/AltDados.html"
+			style="color: #ffff; font-size: 1.25em; font-family: arial;">Altere
+				seus dados</a>&nbsp&nbsp&nbsp&nbsp
+		</li>
 
-<!-- 				Sobre -->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<button class="btn fa fa-question-circle" -->
-<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
-<!-- 						<a href="sobre.html" style="color: #ffff; font-family: arial;"> -->
-<!-- 							Sobre</a> -->
-<!-- 					</button> -->
-<!-- 				</li> -->
 
-<!-- 				<li class="nav-item"> -->
 
-<!-- 					<form th:action="@{/logout}" method="get"> -->
-<!-- 						<button class="btn btn-md btn-warning btn-block" -->
-<!-- 							name="registration" type="Submit">Logout</button> -->
-<!-- 				</li> -->
-<!-- 				</form> -->
+		<li class="nav-item">
 
-<!-- 			</ul> -->
+			<form th:action="@{/logout}" method="get">
+				<button class="btn btn-md btn-warning btn-block" name="registration"
+					type="Submit">Logout</button>
+		</li>
+
+		</ul>
+
+
+		<!-- 			<ul class="navbar-nav ml-auto"> -->
+
+		<!-- 				Sobre -->
+		<!-- 				<li class="nav-item"> -->
+		<!-- 					<button class="btn fa fa-question-circle" -->
+		<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
+		<!-- 						<a href="sobre.html" style="color: #ffff; font-family: arial;"> -->
+		<!-- 							Sobre</a> -->
+		<!-- 					</button> -->
+		<!-- 				</li> -->
+
+		<!-- 				<li class="nav-item"> -->
+
+		<!-- 					<form th:action="@{/logout}" method="get"> -->
+		<!-- 						<button class="btn btn-md btn-warning btn-block" -->
+		<!-- 							name="registration" type="Submit">Logout</button> -->
+		<!-- 				</li> -->
+		<!-- 				</form> -->
+
+		<!-- 			</ul> -->
 
 		</div>
 
