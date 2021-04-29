@@ -29,3 +29,11 @@ body {
 	margin: 0px;
 	padding: 0px;
 }
+
+.btn-lg {
+	background-color: #39bcb6;
+}
+
+.btn-lg:hover {
+	text-decoration: underline;
+}

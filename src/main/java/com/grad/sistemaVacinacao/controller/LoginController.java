@@ -56,6 +56,7 @@ public class LoginController {
 		return modelAndView;
 	}
 
+	
 	@GetMapping(value = "/admin/home")
 	public ModelAndView home() {
 		ModelAndView modelAndView = new ModelAndView();
