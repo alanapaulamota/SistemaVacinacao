@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <meta name="viewport"
@@ -16,101 +17,144 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-	<!--Navbar da Página-->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-dark "
-		style="background-color: #39bcb6; padding: 15px;">
+	<!-- 	<!--Navbar da Página-->
+	<!-- 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark " -->
+	<!-- 		style="background-color: #39bcb6; padding: 15px;"> -->
 
-		<!--Botão collapse navbar-->
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSite" style="background-color: black;">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+	<!-- 		<!--Botão collapse navbar-->
+	<!-- 		<button class="navbar-toggler" type="button" data-toggle="collapse" -->
+	<!-- 			data-target="#navbarSite" style="background-color: black;"> -->
+	<!-- 			<span class="navbar-toggler-icon"></span> -->
+	<!-- 		</button> -->
 
-		<div class="collapse navbar-collapse" id="navbarSite">
+	<!-- 		<div class="collapse navbar-collapse" id="navbarSite"> -->
 
-			<ul class="navbar-nav mr-auto">
-				<!--Dropdown Item Navbar -->
+	<!-- 			<ul class="navbar-nav mr-auto"> -->
+	<!-- 				Dropdown Item Navbar -->
 
 
-				<!--1 início-->
-				<br>
-				<li class="nav-item">&nbsp&nbsp<a href="#"
-					style="color: #ffff; font-family: arial; font-size: 1.25em;">Sobre</a>&nbsp&nbsp&nbsp&nbsp
-				</li>
+	<!-- 				1 início -->
+	<!-- 				<br> -->
+	<!-- 				<li class="nav-item">&nbsp&nbsp<a href="/.html" -->
+	<!-- 					style="color: #ffff; font-family: arial; font-size: 1.25em;">Sobre</a>&nbsp&nbsp&nbsp&nbsp -->
+	<!-- 				</li> -->
 
-				<!--2 agendamento-->
-				<li class="nav-item">&nbsp&nbsp<a href="#"
-					style="color: #ffff; font-family: arial; font-size: 1.25em;">Agendamento</a>&nbsp&nbsp&nbsp&nbsp
-				</li>
 
-				<!--4 Carteira de Vacinação-->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="dropdownSite"
-					data-toggle="dropdown"
-					style="font-size: 1.25em; padding-top: 0px;; color: #ffff; font-family: arial;">&nbsp
-						Carteira de vacinação &nbsp</a> <!--3 Altere seus Dados-->
-				<li class="nav-item">&nbsp&nbsp<a href="/AltDados.html"
-					style="color: #ffff; font-size: 1.25em; font-family: arial;">Altere
-						seus dados</a>&nbsp&nbsp&nbsp&nbsp
-				</li>
+	<!-- 				2 agendamento -->
+	<!-- 				<li class="nav-item">&nbsp&nbsp<a href="#" -->
+	<!-- 					style="color: #ffff; font-family: arial; font-size: 1.25em;">Agendamento</a>&nbsp&nbsp&nbsp&nbsp -->
+	<!-- 				</li> -->
 
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="/carteira.html">Carteira de
-						Vacinação</a> <a class="dropdown-item" href="/carteirainfantil.html">Carteira
-						de Vacinação Infantil</a>
+	<!-- 				4 Carteira de Vacinação -->
+	<!-- 				<li class="nav-item dropdown"><a -->
+	<!-- 					class="nav-link dropdown-toggle" href="#" id="dropdownSite" -->
+	<!-- 					data-toggle="dropdown">&nbsp Carteira de vacinação &nbsp</a> -->
+	<!-- 					<div class="dropdown-menu"> -->
+	<!-- 						<a class="dropdown-item" href="/carteira.html">Carteira de -->
+	<!-- 							Vacinação</a> <a class="dropdown-item" href="/carteirainfantil.html">Carteira -->
+	<!-- 							de Vacinação Infantil</a></li> -->
+	<!-- 		</div> -->
+
+
+	<!-- 		<!--3 Altere seus Dados-->
+	<!-- 		<li class="nav-item">&nbsp&nbsp<a href="/AltDados.html" -->
+	<!-- 			style="color: #ffff; font-size: 1.25em; font-family: arial;">Altere -->
+	<!-- 				seus dados</a>&nbsp&nbsp&nbsp&nbsp -->
+	<!-- 		</li> -->
+
+
+
+	<!-- 		<li class="nav-item"> -->
+
+	<!-- 			<form th:action="@{/logout}" method="get" class="logout"> -->
+	<!-- 				<button class="btn btn-md btn-warning btn-block" name="registration" -->
+	<!-- 					type="Submit">Logout</button> -->
+	<!-- 		</li> -->
+
+	<!-- 		</ul> -->
+
+
+
+
+
+
+	<!-- 			<ul class="navbar-nav ml-auto"> -->
+
+	<!-- 				Sobre -->
+	<!-- 				<li class="nav-item"> -->
+	<!-- 					<button class="btn fa fa-question-circle" -->
+	<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
+	<!-- 						<a href="sobre.html" style="color: #ffff; font-family: arial;"> -->
+	<!-- 							Sobre</a> -->
+	<!-- 					</button> -->
+	<!-- 				</li> -->
+
+	<!-- 				<li class="nav-item"> -->
+
+	<!-- 					<form th:action="@{/logout}" method="get"> -->
+	<!-- 						<button class="btn btn-md btn-warning btn-block" -->
+	<!-- 							name="registration" type="Submit">Logout</button> -->
+	<!-- 				</li> -->
+	<!-- 				</form> -->
+
+	<!-- 			</ul> -->
+
+	<!-- 		</div> -->
+
+	<!-- 	</nav> -->
+
+	<!-- ======= Header + NAVBAR ======= -->
+	<header id="header" class="fixed-top">
+
+		<div class="container-fluid">
+
+			<div class="row justify-content-center">
+
+				<div
+					class="col-xl-10 d-flex align-items-center  justify-content-center">
+
+
+					<nav class="nav-menu d-none d-lg-block">
+						<ul>
+							<li><a href="#sobre">SOBRE</a></li>
+							<li><a href="#agendamento">AGENDAMENTO DE VACINAS</a></li>
+							<li><a href="#carteira">CARTEIRA DE VACINACAO</a></li>
+							<li><a href="#pcarteiraInfantil">CARTEIRA DE VACINACAO INFANTIL</a></li>
+							<li><a href="#AlterarDados">ALTERAR DADOS</a></li>
+							<div class="botaoSair">
+								<form th:action="@{/logout}" method="get">
+									<button class="btn btn-lg" name="registration" type="Submit">SAIR</button>
+							</div>
+						</ul>
+					</nav>
+					<!-- .nav-menu -->
+
 				</div>
-				</li>
-				
-					<li class="nav-item">
-
-					<form th:action="@{/logout}" method="get">
-						<button class="btn btn-md btn-warning btn-block"
-							name="registration" type="Submit">Logout</button>
-				</li>
-
-			</ul>
-
-
-<!-- 			<ul class="navbar-nav ml-auto"> -->
-
-<!-- 				Sobre -->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<button class="btn fa fa-question-circle" -->
-<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
-<!-- 						<a href="sobre.html" style="color: #ffff; font-family: arial;"> -->
-<!-- 							Sobre</a> -->
-<!-- 					</button> -->
-<!-- 				</li> -->
-
-<!-- 				<li class="nav-item"> -->
-
-<!-- 					<form th:action="@{/logout}" method="get"> -->
-<!-- 						<button class="btn btn-md btn-warning btn-block" -->
-<!-- 							name="registration" type="Submit">Logout</button> -->
-<!-- 				</li> -->
-<!-- 				</form> -->
-
-<!-- 			</ul> -->
-
+			</div>
 		</div>
+	</header>
+	<!-- End Header -->
 
-	</nav>
 	<!-- Corpo -->
-	<br>
-	<br>
 	<div class="panel-heading">
 		<span th:utext="${userName}"></span>
 	</div>
 	<!--div vídeo-->
-	<div class="container-fluid" style="width: 100%; text-align: center;">
-		<section class="video">
+	<section class="video">
+		<div class="container-fluid" style="width: 100%; text-align: left;">
 
 			<div class="container">
 				<div class="ytplayer" id="ytplayer">
@@ -137,180 +181,255 @@
 				<!--        left"" data-toggle="modal" data-target="#exampleModal" -->
 				<!--        data-whatever="@mdo">Falar com @mdo</button> -->
 
+
+				<div class="card-help">
+					<div class="card-body">
+						<img th:src="@{/images/pergF.svg}"
+							class="img-responsive center-block" width="100" height="100"
+							alt="perguntasF" />
+
+						<div class="card-body">
+							<p class="card-text">Precisa de ajuda?</p>
+						</div>
+					</div>
+				</div>
 			</div>
-		</section>
-	</div>
-	<br>
-	<br>
+	</section>
+
 
 	<!--div 1-->
-	<div class="container-fluid" style="width: 70%">
-		<div class="row">
-			<br>
-			<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
-				<div class="card text-center">
-					<div class="card-header" style="background-color: #4E598F">
-						<h3 style="color: white;">Principais notícias sobre COVID-19</h3>
-					</div>
-					<div class="card-body">
-						<p class="card-text">Fique por dentro das principais notícias
-							relacionadas ao novo vírus COVID-19.</p>
-						<a href="http://www.saude.df.gov.br/coronavirus/" target="_blank"
-							class="btn btn-success">Acessar</a>
+	<section class="noticias">
+		<div class="container-fluid" style="width: 70%; text-align: right;">
+			<div class="row">
+				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">
+								Principais notícias sobre <b>COVID-19</b>
+							</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/covid.svg}"
+								class="img-responsive center-block" width="100" height="100"
+								alt="noticias" />
+
+							<p class="card-text">
+								Fique por dentro das principais notícias relacionadas ao novo
+								vírus <b>COVID-19.</b>
+							</p>
+							<a href="http://www.saude.df.gov.br/coronavirus/" target="_blank"
+								class="btn btn-success btn-lg">Acessar</a>
+						</div>
 					</div>
 				</div>
-				<br>
-			</div>
 
-			<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
-				<div class="card text-center">
-					<div class="card-header" style="background-color: #4E598F">
-						<h3 style="color: white;">Principais notícias de Saúde</h3>
-					</div>
-					<div class="card-body">
-						<p class="card-text">Fique por dentro das principais notícias
-							que estão acontecendo sobre saúde.</p>
-						<a href="http://www.saude.df.gov.br/category/noticias/"
-							target="_blank" class="btn btn-success">Acessar</a>
+				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">
+								Principais notícias sobre <b>SAÚDE</b>
+							</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/relatorioSaude.svg}"
+								class="img-responsive center-block" width="100" height="100"
+								alt="saude" />
+
+							<p class="card-text">
+								Fique por dentro das principais notícias que estão acontecendo
+								sobre <B>saúde</B>.
+							</p>
+							<a href="http://www.saude.df.gov.br/coronavirus/" target="_blank"
+								class="btn btn-success btn-lg">Acessar</a>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<br> <br>
-	</div>
-
+	</section>
 	<!--div 2-->
-	<div class="container-fluid" style="width: 70%">
-		<div class="row">
-			<br>
-			<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-				<div class="card text-center">
-					<div class="card-header" style="background-color: #4E598F">
-						<h3 style="color: white;">Cadastramento de Filhos</h3>
-					</div>
-					<div class="card-body">
-						<p class="card-text">Realize o cadastro da carteira de vacina
-							digital dos seus filhos.</p>
-						<a href="#" class="btn btn-success">Acessar</a>
-					</div>
-				</div>
-				<br>
-			</div>
+	<section class="cadastramento">
 
-			<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-				<div class="card text-center">
-					<div class="card-header" style="background-color: #4E598F">
-						<h3 style="color: white;">Acesse sua caderneta de vacinação
-							digital</h3>
+		<div class="container-fluid" style="width: 70%">
+			<div class="row">
+				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">Cadastramento de Filhos</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/criancas.svg}"
+								class="img-responsive center-block" width="100" height="100"
+								alt="filhos" />
+							<p class="card-text">Realize o cadastro da carteira de vacina
+								digital dos seus filhos.</p>
+							<a href="#" class="btn btn-success btn-lg">Acessar</a>
+						</div>
 					</div>
-					<div class="card-body">
-						<p class="card-text">Acesse sua caderneta de vacina.</p>
-						<a href="#" class="btn btn-success">Acessar</a>
-					</div>
+					<br>
 				</div>
-				<br>
-			</div>
 
-			<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-				<div class="card text-center">
-					<div class="card-header" style="background-color: #4E598F">
-						<h3 style="color: white;">Informações sobre vacinas</h3>
-					</div>
-					<div class="card-body">
-						<p class="card-text">Fique por dentro das principais notícias
-							e informações sobre as vacinas.</p>
-						<a href="http://www.saude.df.gov.br/vacinometro/" target="_blank"
-							class="btn btn-success">Acessar</a>
+				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">Acesse sua caderneta de vacinação
+								digital</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/cardenetaVac.svg}"
+								class="img-responsive center-block" width="100" height="100"
+								alt="carteira" />
+							<p class="card-text">Acesse sua caderneta de vacina.</p>
+							<a href="#" class="btn btn-success btn-lg">Acessar</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<br> <br>
-	</div>
-
+	</section>
 	<!--div 3-->
-	<div class="container-fluid" style="width: 70%;">
-		<div class="row">
-			<br>
-			<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
-				<div class="card text-center">
-					<div class="card-header" style="background-color: #4E598F">
-						<h3 style="color: white;">Locais de vacinação</h3>
-					</div>
-					<div class="card-body">
-						<p class="card-text">Localize o posto de vacinação mais
-							próximo de você.</p>
-						<a href=" http://www.saude.df.gov.br/locaisdevacinacao/"
-							target="_blank" class="btn btn-success">Acessar</a>
-					</div>
-				</div>
-				<br>
-			</div>
 
-			<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
-				<div class="card text-center">
-					<div class="card-header" style="background-color: #4E598F">
-						<h3 style="color: white;">Outras informações sobre saúde</h3>
-					</div>
-					<div class="card-body">
-						<p class="card-text">
-							Acesse o site da <b>Secretaria de saúde.</b>
-						</p>
-						<a href="http://www.saude.df.gov.br/" target="_blank"
-							class="btn btn-success">Acessar</a>
+	<section class="info">
+
+
+		<div class="container-fluid" style="width: 70%;">
+			<div class="row">
+				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">Locais de vacinação</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/localizacao.svg}"
+								class="img-responsive center-block" width="100" height="100"
+								alt="localizacao" />
+							<p class="card-text">Localize o posto de vacinação mais
+								próximo de você.</p>
+							<a href=" http://www.saude.df.gov.br/locaisdevacinacao/"
+								target="_blank" class="btn btn-success btn-lg">Acessar</a>
+						</div>
 					</div>
 				</div>
+
+
+				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">Informações sobre vacinas</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/vacina.svg}"
+								class="img-responsive center-block" width="100" height="100"
+								alt="gdf1" />
+							<p class="card-text">Fique por dentro das principais notícias
+								e informações sobre as vacinas.</p>
+							<a href="http://www.saude.df.gov.br/vacinometro/" target="_blank"
+								class="btn btn-success btn-lg">Acessar</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">Outras informações sobre saúde</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/gdf1.svg}"
+								class="img-responsive center-block" width="150" height="150"
+								alt="vacina" />
+							<p class="card-text">
+								Acesse o site da <b>Secretaria de saúde.</b>
+							</p>
+							<a href="http://www.saude.df.gov.br/" target="_blank"
+								class="btn btn-success btn-lg">Acessar</a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
-		<br> <br>
-	</div>
+	</section>
 
 	<!--div 4-->
-	<div class="container-fluid" style="width: 60%">
-		<div class="row">
-			<br>
-			<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
-				<div class="card text-center">
-					<div class="card-header" style="background-color: #4E598F">
-						<h3 style="color: white;">Você conhece o SUS?</h3>
-					</div>
-					<div class="card-body">
-						<p class="card-text">Acesse o site do SUS para mais
-							informações sobre o SUS e o cartão SUS.</p>
-						<a href="https://conectesus-paciente.saude.gov.br/"
-							target="_blank" class="btn btn-success">Acessar</a>
-					</div>
-				</div>
-				<br>
-			</div>
+	<section class="sus">
 
-			<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6"
-				style="text-align: center;">
-				<a href="URL DO FACEBOOK"><img border="0" src="images/gotao.png" /></a>
+		<div class="container-fluid" style="width: 60%">
+			<div class="row">
+				<br>
+				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">
+								Você conhece o <b>SUS?</b>
+							</h3>
+						</div>
+						<div class="card-body">
+							<h4>O Sistema Único de Saúde (SUS) é um dos maiores e mais
+								complexos sistemas de saúde pública do mundo, garantindo acesso
+								integral, universal e gratuito para toda a população do país.</h4>
+
+							<p class="card-text">
+								Acesse o site do <b>SUS</b> para mais informações sobre o <b>SUS</b> e
+								o <b>cartão SUS</b>.
+							</p>
+							<a href="https://conectesus-paciente.saude.gov.br/"
+								target="_blank" class="btn btn-success btn-lg">Acessar</a>
+						</div>
+					</div>
+					<br>
+				</div>
+
+				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6"
+					style="text-align: center;">
+					<img th:src="@{/images/gotao.png}"
+						class="img-responsive center-block" width="250" height="250"
+						alt="gotao" />
+				</div>
 			</div>
 		</div>
-		<br> <br>
-	</div>
+	</section>
 
 	<!-- Section contato-->
 	<section class="contato">
-		<h1>Ainda tem dúvidas?</h1>
-		<h3>Entre em contato conosco</h3>
+
+		<div class="container-fluid" style="width: 60%">
+			<div class="row">
+				<br>
+				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+					<div class="card text-center cardFooter">
+						<div class="card-header" style="background-color: 
+#39BC7D;">
+							<h3 class="titulocardFooter">
+								Ainda tem <b>dúvidas?</b>
+							</h3>
+							<p class="card-text cardDuvidas">Entre em contato conosco!</p>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/telefone.svg}"
+								class="img-responsive center-block" width="100" height="100"
+								alt="telefone" />
+							<a href="https://conectesus-paciente.saude.gov.br/"
+								target="_blank" class="btn btn-success btn-lg">Contato</a>
+						</div>
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!-- Rodapé-->
-	<div class="container-fluid pt-3 navbar-fixed-bottom"
-		id="container-rodape" style="background-color: #39bcb6; color: white">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-				style="font-size: 13px; text-align: center">
-				<p>SNV 2021 © Todos os direitos reservados</p>
+	<section class="footer">
+		<div class="container-fluid pt-3" id="container-rodape"
+			style="background-color: #39bcb6; color: white">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+					style="font-size: 13px; text-align: center">
+					<p>SNV 2021 © Todos os direitos reservados</p>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-
-
+	<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
@@ -323,5 +442,14 @@
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/62e43a72a9.js"></script>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
 </body>
 </html>
