@@ -67,13 +67,5 @@ public class LoginController {
 		modelAndView.setViewName("admin/home");
 		return modelAndView;
 	}
-	
-	
-	@GetMapping(value = { "/login/sobre" })
-	public ModelAndView about() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("sobre");
-		return modelAndView;
-	}
 
 }
