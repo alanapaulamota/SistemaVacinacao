@@ -67,6 +67,13 @@
 	font-weight: 700;
 }
 
+.botaoSair .btn-lg{
+	margin-left: 173px;
+	margin-top: 6px;
+	background-color: #4E598F!important;
+	color: #fff;
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
 	.nav-menu>ul {
@@ -278,8 +285,6 @@ body {
 .footer {
 	text-align: center;
 }
-
-
 
 /*--------------------------------------------------------------
 
