@@ -6,11 +6,6 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-
 <title>Bem-Vindo!</title>
 
 <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
@@ -129,10 +124,13 @@
 
 					<nav class="nav-menu d-none d-lg-block">
 						<ul>
-							<li><a href="#sobre">SOBRE</a></li>
-							<li><a href="#agendamento">AGENDAMENTO DE VACINAS</a></li>
-							<li><a href="#carteira">CARTEIRA DE VACINACAO</a></li>
-							<li><a href="#pcarteiraInfantil">CARTEIRA DE VACINACAO
+							<li><a class="mdl-navigation__link" th:href="@{/sobre}">SOBRE</a></li>
+							<li><a class="mdl-navigation__link" th:href="@{/index}">>AGENDAMENTO
+									DE VACINAS</a></li>
+							<li><a class="mdl-navigation__link" th:href="@{/carteira}">>CARTEIRA
+									DE VACINACAO</a></li>
+							<li><a class="mdl-navigation__link"
+								th:href="@{/carteiraInfantil}">>CARTEIRA DE VACINACAO
 									INFANTIL</a></li>
 							<li><a href="#AlterarDados">ALTERAR DADOS</a></li>
 							<div class="botaoSair">
@@ -182,7 +180,6 @@
 				<!--        left"" data-toggle="modal" data-target="#exampleModal" -->
 				<!--        data-whatever="@mdo">Falar com @mdo</button> -->
 
-
 				<div class="card-help">
 					<div class="card-body">
 						<img th:src="@{/images/perguntasF.svg}"
@@ -193,8 +190,10 @@
 							<p class="card-text">Precisa de ajuda?</p>
 						</div>
 					</div>
+
 				</div>
 			</div>
+		</div>
 	</section>
 
 
@@ -245,6 +244,8 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
 	</section>
 	<!--div 2-->
 	<section class="cadastramento">
@@ -261,7 +262,7 @@
 								class="img-responsive center-block" width="100" height="100"
 								alt="filhos" />
 							<p class="card-text">Realize o cadastro da carteira de vacina
-								digital dos seus filhos.</p>
+								digital dos seus dependentes.</p>
 							<a href="#" class="btn btn-success btn-lg">Acessar</a>
 						</div>
 					</div>
@@ -284,6 +285,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
 	<!--div 3-->
 
@@ -292,6 +294,26 @@
 
 		<div class="container-fluid" style="width: 70%;">
 			<div class="row">
+
+				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">Agendamento de *Vacina*</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/agenda.svg}"
+								class="img-responsive center-block" width="182" height="150"
+								alt="agenda" />
+							<p class="card-text">Realize seu agendamento de *Vacina*</p>
+							<br>
+							<p>De acordo com horário disponível</p>
+							<a href="http://www.saude.df.gov.br/" target="_blank"
+								class="btn btn-success btn-lg">Acessar</a>
+						</div>
+					</div>
+				</div>
+
+
 				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
 					<div class="card text-center">
 						<div class="card-header" style="background-color: #4E598F">
@@ -319,31 +341,13 @@
 							<img th:src="@{/images/vacina.svg}"
 								class="img-responsive center-block" width="100" height="100"
 								alt="gdf1" />
-							<p class="card-text">Fique por dentro das principais
-								informações sobre as vacinas.</p>
+							<p class="card-text">Principais informações sobre as vacinas.</p>
 							<a href="http://www.saude.df.gov.br/vacinometro/" target="_blank"
 								class="btn btn-success btn-lg">Acessar</a>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-					<div class="card text-center">
-						<div class="card-header" style="background-color: #4E598F">
-							<h3 class="titulocard">Outras informações sobre saúde</h3>
-						</div>
-						<div class="card-body">
-							<img th:src="@{/images/gdf.svg}"
-								class="img-responsive center-block" width="150" height="150"
-								alt="vacina" />
-							<p class="card-text">
-								Acesse o site da <b>Secretaria de saúde.</b>
-							</p>
-							<a href="http://www.saude.df.gov.br/" target="_blank"
-								class="btn btn-success btn-lg">Acessar</a>
-						</div>
-					</div>
-				</div>
 
 			</div>
 		</div>
@@ -352,10 +356,11 @@
 	<!--div 4-->
 	<section class="sus">
 
-		<div class="container-fluid" style="width: 60%">
+		<div class="container-fluid" style="width: 70%">
 			<div class="row">
-				<br>
-				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+
+
+				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
 					<div class="card text-center">
 						<div class="card-header" style="background-color: #4E598F">
 							<h3 class="titulocard">
@@ -378,8 +383,26 @@
 					<br>
 				</div>
 
-				<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6"
-					style="text-align: center;">
+				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+					<div class="card text-center">
+						<div class="card-header" style="background-color: #4E598F">
+							<h3 class="titulocard">Outras informações sobre saúde</h3>
+						</div>
+						<div class="card-body">
+							<img th:src="@{/images/gdf.svg}"
+								class="img-responsive center-block" width="182" height="150"
+								alt="vacina" />
+							<p class="card-text">
+								Acesse o site da <b>Secretaria de saúde.</b>
+							</p>
+							<a href="http://www.saude.df.gov.br/" target="_blank"
+								class="btn btn-success btn-lg">Acessar</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+
 					<img th:src="@{/images/gotao.png}"
 						class="img-responsive center-block" width="250" height="250"
 						alt="gotao" />
@@ -404,8 +427,8 @@
 						</div>
 						<div class="card-body">
 							<img th:src="@{/images/telefone.svg}"
-								class="img-responsive center-block" width="100" height="100"
-								alt="telefone" /> <a
+								class="img-responsive center-block telefone" width="100"
+								height="100" alt="telefone" /> <a
 								href="https://conectesus-paciente.saude.gov.br/" target="_blank"
 								class="btn btn-success btn-lg">Contato</a>
 						</div>

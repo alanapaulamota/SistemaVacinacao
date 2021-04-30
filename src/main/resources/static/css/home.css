@@ -67,10 +67,10 @@
 	font-weight: 700;
 }
 
-.botaoSair .btn-lg{
+.botaoSair .btn-lg {
 	margin-left: 173px;
 	margin-top: 6px;
-	background-color: #4E598F!important;
+	background-color: #4E598F !important;
 	color: #fff;
 }
 
@@ -227,7 +227,6 @@ body {
 
 .panel-heading {
 	font-size: large;
-	top: 70px;
 }
 
 .nav-item {
@@ -266,17 +265,10 @@ body {
 	margin-top: 45px;
 }
 
-.sus {
-	margin-bottom: 88px;
-}
-
 .card-text {
 	font-size: medium;
 }
 
-.titulocardFooter, .cardDuvidas {
-	color: #000;
-}
 
 .cardFooter {
 	top: 68px;
@@ -301,6 +293,10 @@ body {
  #  Informações
 
  --------------------------------------------------------------*/
+.info .col-lg-4 {
+	width: 23vw;
+}
+
 .info .col-lg-4, .noticias .col-lg-6 {
 	top: 60px;
 }
@@ -316,9 +312,31 @@ body {
 
 /*--------------------------------------------------------------
 
+ #  contato 
+
+ --------------------------------------------------------------*/
+.contato .telefone {
+	margin-bottom: 10px
+}
+
+/*--------------------------------------------------------------
+
+ #  Ze gotão
+
+ --------------------------------------------------------------*/
+.gotao {
+	bottom: 41px;
+}
+
+/*--------------------------------------------------------------
+
  #  FOOTER 
 
  --------------------------------------------------------------*/
 .cardDuvidas {
+	color: #000;
+}
+
+.titulocardFooter, .cardDuvidas {
 	color: #000;
 }

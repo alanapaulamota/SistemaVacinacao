@@ -56,9 +56,19 @@ public class LoginController {
 		return modelAndView;
 	}
 
-	
-	@GetMapping(value = "/admin/home")
+	@GetMapping(value = "/home")
 	public ModelAndView home() {
+		ModelAndView modelAndView = new ModelAndView();
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		User user = userService.findUserByUserName(auth.getName());
+		modelAndView.addObject("userName", "Bem-Vindo " + user.getUserName() + "/" + user.getName() + " "
+				+ user.getLastName() + " (" + user.getEmail() + ")");
+		modelAndView.setViewName("/home");
+		return modelAndView;
+	}
+
+	@GetMapping(value = "/admin/home")
+	public ModelAndView homeAdmin() {
 		ModelAndView modelAndView = new ModelAndView();
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User user = userService.findUserByUserName(auth.getName());

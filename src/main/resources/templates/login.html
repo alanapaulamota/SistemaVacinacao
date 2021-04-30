@@ -27,8 +27,8 @@
 
 					<nav class="nav-menu d-none d-lg-block">
 						<ul>
-							<li><a href="#sobre">SOBRE</a></li>
-							<li><a href="#contato">CONTATO</a></li>
+							<li><a class="sobre" th:href="@{/sobre}">Sobre</a></li>
+							<li><a class="faleConosco" th:href="@{/faleconosco}">Fale Conosco</a></li>
 						</ul>
 					</nav>
 
@@ -37,7 +37,6 @@
 		</div>
 	</header>
 	<!-- End Header -->
-
 	<section class="telalogin">
 		<div class="container">
 			<img th:src="@{/images/key.png}" class="img-responsive center-block"
@@ -57,8 +56,10 @@
 						inválida, por favor verifique.</p>
 				</div>
 				<div>
-					<a href="#" class="forget_password"
-						style="color: #fff; font-family: arial"> Esqueci minha senha </a>
+					<a href=" falaeconosco.html"
+								target="
+								_blank" class="forgot" th:href="@{/forgotpassword}">Esqueci
+						minha senha</a>
 				</div>
 				<button class="btn btn-lg btn-warning btn-block" name="Submit"
 					value="Login" type="Submit" th:text="Entrar"></button>
