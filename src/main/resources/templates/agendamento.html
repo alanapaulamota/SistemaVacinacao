@@ -12,15 +12,8 @@
 <body>
 	<div class="header">
 		<h1>
-			<a
-				href='https://code.daypilot.org/58614/using-javascript-html5-monthly-calendar-in-spring-boot-java'>Using
-				JavaScript/HTML5 Monthly Calendar in Spring Boot (Java)</a>
+			<a> Agendamento de vacinas </a>
 		</h1>
-		<div>
-			<a href="https://javascript.daypilot.org/">DayPilot for
-				JavaScript</a> - HTML5 Calendar/Scheduling Components for
-			JavaScript/Angular/React/Vue
-		</div>
 	</div>
 
 	<div class="main">
@@ -60,7 +53,7 @@
 		nav.onTimeRangeSelected = function(args) {
 			dp.startDate = args.day;
 			dp.update();
-			dp.events.load("/home/agendamento");
+			dp.events.load("/agendamento");
 		};
 		nav.init();
 
@@ -80,7 +73,7 @@
 							resource : args.resource
 						};
 						DayPilot.Http.ajax({
-							url : '/home/agendamento/create',
+							url : '/agendamento/create',
 							data : params,
 							success : function(ajax) {
 								var data = ajax.data;
@@ -99,7 +92,7 @@
 				resource : args.newResource
 			};
 			DayPilot.Http.ajax({
-				url : '/home/agendamento/move',
+				url : '/agendamento/move',
 				data : params,
 				success : function(ajax) {
 					dp.message("Moved");
@@ -114,7 +107,7 @@
 				resource : args.e.resource()
 			};
 			DayPilot.Http.ajax({
-				url : '/home/agendamento/move',
+				url : '/agendamento/move',
 				data : params,
 				success : function(ajax) {
 					dp.message("Resized");
@@ -143,7 +136,7 @@
 						id : e.id()
 					};
 					DayPilot.Http.ajax({
-						url : '/api/events/delete',
+						url : '/agendamento/delete',
 						data : params,
 						success : function(ajax) {
 							dp.events.remove(e);
@@ -193,7 +186,7 @@
 		});
 		dp.init();
 
-		dp.events.load("/home/agendamento");
+		dp.events.load("/agendamento");
 
 		function updateColor(e, color) {
 			var params = {
@@ -201,7 +194,7 @@
 				color : color
 			};
 			DayPilot.Http.ajax({
-				url : '/home/agendamento/setColor',
+				url : '/agendamento/setColor',
 				data : params,
 				success : function(ajax) {
 					e.data.color = color;

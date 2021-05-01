@@ -23,6 +23,10 @@ body {
 	background-color: #39BCB6;
 }
 
+.navbar .navbar-toggle {
+	background-color: #39BCB6 !important;
+}
+
 /*
  * Content
  */

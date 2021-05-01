@@ -1,5 +1,10 @@
+package com.grad.sistemaVacinacao.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 //
-//package com.grad.sistemaVacinacao.controller;
 //
 //import java.time.LocalDateTime;
 //
@@ -22,17 +27,28 @@
 //@RestController
 //public class AgendamentoController {
 //
+
+@Controller
+@RequestMapping("/agendamento")
+public class AgendamentoController {
+
+	@GetMapping("/agendamento")
+	public String agendamento() {
+		return "/agendamento";
+	}
+}
+
 //	@Autowired
 //	AgendamentoRepository agendamentoRepository;
 //
-//	@GetMapping("/home/agendamento")
+//	@GetMapping("/agendamento")
 //	@JsonSerialize(using = LocalDateTimeSerializer.class)
 //	Iterable<Agendamento> agendamento(@RequestParam("start") @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime start,
 //			@RequestParam("end") @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime end) {
 //		return agendamentoRepository.findBetween(start, end);
 //	}
 //
-//	@PostMapping("/home/agendamento/create")
+//	@PostMapping("/agendamento/create")
 //	@JsonSerialize(using = LocalDateTimeSerializer.class)
 //	@Transactional
 //	Agendamento createAgendamento(@RequestBody AgendamentoCreateParams params) {
@@ -46,7 +62,7 @@
 //		return e;
 //	}
 //
-//	@PostMapping("/home/agendamento/move")
+//	@PostMapping("/agendamento/move")
 //	@JsonSerialize(using = LocalDateTimeSerializer.class)
 //	@Transactional
 //	Agendamento moveAgendamento(@RequestBody AgendamentoMoveParams params) {
@@ -59,7 +75,7 @@
 //		return e;
 //	}
 //
-//	@PostMapping("/home/agendamento/setColor")
+//	@PostMapping("/agendamento/setColor")
 //	@JsonSerialize(using = LocalDateTimeSerializer.class)
 //	@Transactional
 //	Agendamento setColor(@RequestBody SetColorParams params) {
@@ -71,7 +87,7 @@
 //		return e;
 //	}
 //
-//	@PostMapping("/home/agendamento/delete")
+//	@PostMapping("/agendamento/delete")
 //	@JsonSerialize(using = LocalDateTimeSerializer.class)
 //	@Transactional
 //	AgendamentoDeleteResponse deleteAgendamento(@RequestBody AgendamentoDeleteParams params) {
