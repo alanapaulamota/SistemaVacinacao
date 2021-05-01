@@ -67,16 +67,20 @@ public class LoginController {
 		return modelAndView;
 	}
 
-	@GetMapping(value = "/admin/home")
-	public ModelAndView homeAdmin() {
-		ModelAndView modelAndView = new ModelAndView();
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		User user = userService.findUserByUserName(auth.getName());
-		modelAndView.addObject("userName", "Bem-Vindo " + user.getUserName() + "/" + user.getName() + " "
-				+ user.getLastName() + " (" + user.getEmail() + ")");
-		modelAndView.addObject("adminMessage", "Conteúdo disponível apenas para usuários com função administrativa");
-		modelAndView.setViewName("admin/home");
-		return modelAndView;
-	}
+//	@GetMapping(value = "/admin/home")
+//	public ModelAndView homeAdmin() {
+//		ModelAndView modelAndView = new ModelAndView();
+//		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//		User user = userService.findUserByUserName(auth.getName());
+//		modelAndView.addObject("userName", "Bem-Vindo " + user.getUserName() + "/" + user.getName() + " "
+//				+ user.getLastName() + " (" + user.getEmail() + ")");
+//		modelAndView.addObject("adminMessage", "Conteúdo disponível apenas para usuários com função administrativa");
+//		modelAndView.setViewName("admin/home");
+//		return modelAndView;
+//	}
 
+	@GetMapping("/admin/homeAdmin")
+	public String homeAdmin() {
+		return "/admin/homeAdmin";
+	}
 }

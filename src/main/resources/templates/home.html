@@ -124,6 +124,7 @@
 
 					<nav class="nav-menu d-none d-lg-block">
 						<ul>
+
 							<li><a class="mdl-navigation__link" th:href="@{/sobre}">SOBRE</a></li>
 							<li><a class="mdl-navigation__link" th:href="@{/index}">AGENDAMENTO
 									DE VACINAS</a></li>
@@ -132,7 +133,9 @@
 							<li><a class="mdl-navigation__link"
 								th:href="@{/carteiraInfantil}">CARTEIRA DE VACINACAO
 									INFANTIL</a></li>
+
 							<li><a href="#AlterarDados">ALTERAR DADOS</a></li>
+							<li><a class="admin" href="/admin/homeAdmin">Administrador</a></li>
 							<div class="botaoSair">
 								<form th:action="@{/logout}" method="get">
 									<button class="btn btn-lg" name="registration" type="Submit">SAIR</button>
@@ -144,6 +147,7 @@
 				</div>
 			</div>
 		</div>
+
 	</header>
 	<!-- End Header -->
 
@@ -239,8 +243,8 @@
 								Fique por dentro das principais notícias que estão acontecendo
 								sobre <B>saúde</B>.
 							</p>
-							<a href="http://www.saude.df.gov.br/category/noticias/" target="_blank"
-								class="btn btn-success btn-lg">Acessar</a>
+							<a href="http://www.saude.df.gov.br/category/noticias/"
+								target="_blank" class="btn btn-success btn-lg">Acessar</a>
 						</div>
 					</div>
 				</div>
