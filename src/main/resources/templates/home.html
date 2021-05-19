@@ -125,13 +125,14 @@
 					<nav class="nav-menu d-none d-lg-block">
 						<ul>
 
-							<li><a class="mdl-navigation__link" th:href="@{/sobre}">SOBRE</a></li>
+							<li><a href="/sobre.html" th:href="@{/sobre}"
+								class="mdl-navigation__link">SOBRE</a></li>
 							<li><a href="/agendamento">AGENDAMENTO DE VACINAS</a></li>
-							<li><a class="mdl-navigation__link" th:href="@{/carteira}">CARTEIRA
-									DE VACINACAO</a></li>
-							<li><a class="mdl-navigation__link"
-								th:href="@{/carteiraInfantil}">CARTEIRA DE VACINACAO
-									INFANTIL</a></li>
+							<li><a href="/carteira.html" th:href="@{/carteira}"
+								class="mdl-navigation__link">CARTEIRA DE VACINACAO</a></li>
+							<li><a href="/carteirainfantil"
+								th:href="@{/carteirainfantil}" class="mdl-navigation__link">CARTEIRA
+									DE VACINACAO INFANTIL</a></li>
 
 							<li><a href="#AlterarDados">ALTERAR DADOS</a></li>
 							<li><a class="admin" href="/admin/homeAdmin">Administrador</a></li>
@@ -266,8 +267,7 @@
 								alt="filhos" />
 							<p class="card-text">Realize o cadastro da carteira de vacina
 								digital dos seus dependentes.</p>
-							<a href=" carteirainfantil.html" target="
-								_blank"
+							<a href="/carteirainfantil" th:href="@{/carteirainfantil}"
 								class="btn btn-success btn-lg">Acessar</a>
 						</div>
 					</div>

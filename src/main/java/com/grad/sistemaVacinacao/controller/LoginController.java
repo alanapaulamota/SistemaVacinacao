@@ -83,4 +83,5 @@ public class LoginController {
 	public String homeAdmin() {
 		return "/admin/homeAdmin";
 	}
+
 }
