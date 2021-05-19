@@ -108,9 +108,9 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>3</td>
-								<td>Posto A</td>
+							<tr th:each="d : ${localVacinacao}">
+								<td th:text="${d.id}">3</td>
+								<td th:text="d.nome">Posto A</td>
 								<td colspan="2"><a class="btn btn-info btn-sm"
 									href="/departamentos/editar/3" role="button"> <span
 										class="oi oi-brush" title="Editar" aria-hidden="true"></span>
@@ -121,42 +121,7 @@
 											aria-hidden="true"></span>
 									</button></td>
 							</tr>
-							<tr>
-								<td>2</td>
-								<td>Posto B</td>
-								<td colspan="2"><a class="btn btn-info btn-sm"
-									href="/departamentos/editar/2" role="button"> <span
-										class="oi oi-brush" title="Editar" aria-hidden="true"></span>
-								</a>
-									<button type="button" class="btn btn-danger btn-sm">
-										<span class="oi oi-circle-x" title="Exclusão desabilitada"
-											aria-hidden="true"></span>
-									</button></td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>Posto C</td>
-								<td colspan="2"><a class="btn btn-info btn-sm"
-									href="/departamentos/editar/1" role="button"> <span
-										class="oi oi-brush" title="Editar" aria-hidden="true"></span>
-								</a>
-									<button type="button" class="btn btn-danger btn-sm">
-										<span class="oi oi-circle-x" title="Exclusão desabilitada"
-											aria-hidden="true"></span>
-									</button></td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>Posto D</td>
-								<td colspan="2"><a class="btn btn-info btn-sm"
-									href="/departamentos/editar/4" role="button"> <span
-										class="oi oi-brush" title="Editar" aria-hidden="true"></span>
-								</a>
-									<button type="button" class="btn btn-danger btn-sm">
-										<span class="oi oi-circle-x" title="Exclusão desabilitada"
-											aria-hidden="true"></span>
-									</button></td>
-							</tr>
+
 						</tbody>
 					</table>
 				</div>

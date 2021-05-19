@@ -11,6 +11,10 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
+/**
+ * Protipo FIGMA - https://www.figma.com/file/TkTm15RwBqsePD6Quh3Da0/SNV?node-id=0%3A1
+ *
+ */
 @Data
 @Builder
 @AllArgsConstructor

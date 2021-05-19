@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 <title>Local Vacinacação</title>
 <meta charset="UTF-8" />
@@ -48,10 +50,10 @@
 					<li class="nav-item"><span class="nav-link active">Locais
 							de Vacinação</span></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/departamentos/cadastrar"> <i class="oi oi-plus"></i> <span>Cadastrar</span>
+						href="/localVacinacao/cadastrar"> <i class="oi oi-plus"></i> <span>Cadastrar</span>
 					</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/departamentos/listar"> <i class="oi oi-spreadsheet"></i>
+						href="/localVacinacao/listar"> <i class="oi oi-spreadsheet"></i>
 							<span>Listar </span>
 					</a></li>
 				</ul>
@@ -87,9 +89,9 @@
 				<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active"><i class="oi oi-caret-right"></i>
-							<span>Cadastrar Departamentos</span></li>
+							<span>Cadastrar Locais de Vacincação</span></li>
 					</ul>
-					<a class="btn btn-primary btn-md" href="/departamentos/listar"
+					<a class="btn btn-primary btn-md" href="/localVacinacao/listar"
 						role="button"> <span class="oi oi-spreadsheet" title="Listar"
 						aria-hidden="true"></span> <span>Listar Locais de Vacinacao</span>
 					</a>
@@ -97,12 +99,14 @@
 			</nav>
 
 			<div class="container" id="cadastro">
-				<form action="/departamentos/salvar" method="POST">
+				<form th:action="${departamento.id == null} @{/localVacinacao/salvar}"
+					th:object=${localVacinacao} method="POST">
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="nome">Nome</label> <input type="text"
-								class="form-control" id="nome" placeholder="Nome Departamento"
-								autofocus="autofocus" name="nome" value="" />
+								class="form-control" id="nome"
+								placeholder="Nome Local Vacinação" autofocus="autofocus"
+								th:field="*{nome" />
 						</div>
 					</div>
 					<div class="form-row">
