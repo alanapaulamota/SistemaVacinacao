@@ -28,7 +28,7 @@
 							checked="checked"> Mostrar Finais de Semana</label>
 					</div>
 					<div class="toolbar-item">
-						Export as: &nbsp; <select id="format">
+						Exportar como: &nbsp; <select id="format">
 							<option value="svg">SVG</option>
 							<option value="jpeg">JPEG</option>
 							<option value="png">PNG</option>
@@ -78,7 +78,7 @@
 							success : function(ajax) {
 								var data = ajax.data;
 								dp.events.add(data);
-								dp.message("Event created");
+								dp.message("Evento Criado");
 							},
 
 						})
@@ -95,7 +95,7 @@
 				url : '/agendamento/move',
 				data : params,
 				success : function(ajax) {
-					dp.message("Moved");
+					dp.message("Alterado");
 				},
 			})
 		};
@@ -110,7 +110,7 @@
 				url : '/agendamento/move',
 				data : params,
 				success : function(ajax) {
-					dp.message("Resized");
+					dp.message("Redimensionado");
 				},
 			});
 		};
