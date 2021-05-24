@@ -11,10 +11,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
-/**
- * Protipo FIGMA - https://www.figma.com/file/TkTm15RwBqsePD6Quh3Da0/SNV?node-id=0%3A1
- *
- */
 @Data
 @Builder
 @AllArgsConstructor
@@ -25,9 +21,9 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "user_id")
+	@Column(name = "id")
 	private Integer id;
-	@Column(name = "user_name")
+	@Column(name = "apelido")
 	@Length(min = 5, message = "*Seu nome de usuário deve ter pelo menos 5 caracteres")
 	@NotEmpty(message = "*Forneça um nome de usuário")
 	private String userName;
@@ -35,14 +31,14 @@ public class User {
 	@Email(message = "*Por favor forneça um email válido")
 	@NotEmpty(message = "*Forneça um email válido")
 	private String email;
-	@Column(name = "password")
+	@Column(name = "senha")
 	@Length(min = 5, message = "*Sua senha deve ter pelo menos 5 caracteres")
 	@NotEmpty(message = "*Por favor, forneça sua senha")
 	private String password;
-	@Column(name = "name")
+	@Column(name = "nome")
 	@NotEmpty(message = "*Por favor, forneça seu nome")
 	private String name;
-	@Column(name = "last_name")
+	@Column(name = "sobrenome")
 	@NotEmpty(message = "*Por favor, forneça sua sobrenome")
 	private String lastName;
 	@Column(name = "active")

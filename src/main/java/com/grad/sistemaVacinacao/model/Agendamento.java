@@ -24,7 +24,7 @@ public class Agendamento {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "agendamento_id")
+	@Column(name = "id")
 	Long id;
 
 	@Column(name = "text")

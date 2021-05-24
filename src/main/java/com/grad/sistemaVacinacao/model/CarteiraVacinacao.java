@@ -17,10 +17,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "carteiraVacinacao")
+@Table(name = "carteira")
 public class CarteiraVacinacao {
 
-	@Column(name = "carteiraVacinacao_id")
+	@Column(name = "id")
 	private Long id;
 	private User usuario;
 	private List<ItemCarteiraVacinacao> vacinacoes;

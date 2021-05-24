@@ -1,13 +1,23 @@
 package com.grad.sistemaVacinacao.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+import org.springframework.data.annotation.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Deprecated
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 @SuppressWarnings("serial")
 @MappedSuperclass
 public abstract class AbstractEntity<ID extends Serializable> implements Serializable {
@@ -15,27 +25,5 @@ public abstract class AbstractEntity<ID extends Serializable> implements Seriali
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Id id;
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!(obj instanceof AbstractEntity)) {
-			return false;
-		}
-		AbstractEntity<?> other = (AbstractEntity<?>) obj;
-		return Objects.equals(id, other.id);
-	}
-
-	@Override
-	public String toString() {
-		return "id=" + id;
-	}
 
 }

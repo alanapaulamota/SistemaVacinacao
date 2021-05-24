@@ -8,10 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -21,14 +22,8 @@ import com.grad.sistemaVacinacao.repository.AgendamentoRepository;
 
 
 @Controller
-@RequestMapping("/agendamento")
+//@RequestMapping("/agendamento")
 public class AgendamentoController {
-
-//	@GetMapping("/agendamento")
-//	public String agendamento() {
-//		return "/agendamento";
-//	}
-
 
 	@Autowired
 	AgendamentoRepository agendamentoRepository;
@@ -40,7 +35,7 @@ public class AgendamentoController {
 		return agendamentoRepository.findBetween(start, end);
 	}
 
-	@PostMapping("/agendamento/create")
+	@PostMapping("/agendamento")
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@Transactional
 	Agendamento createAgendamento(@RequestBody AgendamentoCreateParams params) {
@@ -54,7 +49,7 @@ public class AgendamentoController {
 		return e;
 	}
 
-	@PostMapping("/agendamento/move")
+	@PatchMapping("/agendamento")
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@Transactional
 	Agendamento moveAgendamento(@RequestBody AgendamentoMoveParams params) {
@@ -79,7 +74,7 @@ public class AgendamentoController {
 		return e;
 	}
 
-	@PostMapping("/agendamento/delete")
+	@DeleteMapping("/agendamento")
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@Transactional
 	AgendamentoDeleteResponse deleteAgendamento(@RequestBody AgendamentoDeleteParams params) {
@@ -88,7 +83,7 @@ public class AgendamentoController {
 
 		return new AgendamentoDeleteResponse() {
 			{
-				message = "Deleted";
+				message = "Excluído";
 			}
 		};
 	}

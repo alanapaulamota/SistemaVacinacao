@@ -14,14 +14,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
-@SuppressWarnings("serial")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "cargo")
-public class Cargo extends AbstractEntity<Long> {
-	@Column(name = "name")
+public class Cargo {
+	@Column(name = "nome")
 	@NotEmpty(message = "*Por favor, forneça seu nome")
 	private String name;
 

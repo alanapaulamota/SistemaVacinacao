@@ -1,8 +1,9 @@
 package com.grad.sistemaVacinacao.model;
 
+import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,55 +11,65 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.grad.sistemaVacinacao.model.enumeration.TipoVacina;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "localVacinacao")
 @Entity
-public class LocalVacinacao {
+@Table(name = "estoque_vacina")
+public class EstoqueVacina implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Long id;
 
+	@NotNull
 	@Column(name = "nome")
 	private String nome;
+	
+	@NotNull
+	@Column(name = "quantidade")
+	private String quantidade;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "endereco_id_fk")
-	private Endereco endereco;
+	@NotNull
+	@Column(name = "fornecedor")
+	private String fornecedor;
 
+	@NotNull
+	@Column(name = "marca")
+	private String marca;
+
+	@NotNull
+	@Column(name = "preco_compra")
+	private String precoCompra;
+
+	@NotNull
+	@Column(name = "preco_venda")
+	private String precoVenda;
+
+	@NotNull
+	@Column(name = "data")
+	private Date data;
+
+	@NotNull
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private TipoVacina tipoVacina;
 
-	@OneToMany(mappedBy = "localvacinacao")
-	private List<Cargo> cargos;
-
-	/**
-	 * @return the cargos
-	 */
-	public List<Cargo> getCargos() {
-		return cargos;
-	}
-
-	/**
-	 * @param cargos the cargos to set
-	 */
-	public void setCargos(List<Cargo> cargos) {
-		this.cargos = cargos;
-	}
+	@OneToMany(mappedBy = "estoque_vacina")
+	private List<Vacina> vacinas;
 
 }

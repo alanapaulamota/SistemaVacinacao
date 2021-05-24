@@ -21,16 +21,15 @@ import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @Entity
-@SuppressWarnings("serial")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "funcionarios")
-public class Funcionario extends AbstractEntity<Long> {
+@Table(name = "funcionario")
+public class Funcionario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "funcionario_id")
+	@Column(name = "id")
 	private Long id;
 
 	@NotNull

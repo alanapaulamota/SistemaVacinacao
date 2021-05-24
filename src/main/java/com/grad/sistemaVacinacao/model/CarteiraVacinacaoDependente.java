@@ -4,21 +4,34 @@ import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Length;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "carteira_dependente")
 public class CarteiraVacinacaoDependente {
 
-	@Column(name = "carteiraVacinacaoDependente_id")
+	@Column(name = "id")
 	private Long id;
-	@Column(name = "dependente_name")
+	@Column(name = "nome")
 	private String nome;
 
 	@Length(max = 16, message = "*A idade do dependente deve ser menor do que 16 anos")
-	@Column(name = "dependente_idade")
+	@Column(name = "idade")
 	private Integer idade;
 
-	@Column(name = "dependente_sexo")
+	@Column(name = "sexo")
 	private String sexo;
 
 	private User usuario;
