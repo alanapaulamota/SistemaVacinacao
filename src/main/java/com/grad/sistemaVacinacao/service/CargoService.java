@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.grad.sistemaVacinacao.model.Cargo;
 
+/**
+ * Serviço para gerenciamento de
+ * {@link com.grad.sistemaVacinacao.model.Cargo}.
+ */
 public interface CargoService {
 
 	void salvar(Cargo cargo);

@@ -12,6 +12,10 @@ import org.springframework.stereotype.Repository;
 
 import com.grad.sistemaVacinacao.model.Agendamento;
 
+/**
+ * Repositório para gerenciamento de
+ * {@link com.grad.sistemaVacinacao.model.Agendamento}.
+ */
 @Repository
 public interface AgendamentoRepository extends CrudRepository<Agendamento, Long> {
 	@Query("from Event e where not(e.end < :from or e.start > :to)")

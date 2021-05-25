@@ -14,6 +14,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
+/**
+ * Classe model referente ao cargo do funcionário, contém: atributos, equals e
+ * hashcode.Além dos construtores e getters/setters gerados pelo lombok.
+ * 
+ */
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

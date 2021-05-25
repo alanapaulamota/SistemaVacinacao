@@ -11,6 +11,11 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
+/**
+ * Classe model referente ao Usuário contém: atributos, equals e
+ * hashcode.Além dos construtores e getters/setters gerados pelo lombok.
+ * 
+ */
 @Data
 @Builder
 @AllArgsConstructor

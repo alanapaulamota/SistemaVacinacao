@@ -20,6 +20,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
+/**
+ * Classe model referente ao funcionário de vacinação contém: atributos, equals
+ * e hashcode.Além dos construtores e getters/setters gerados pelo lombok.
+ * 
+ */
 @Entity
 @Builder
 @AllArgsConstructor

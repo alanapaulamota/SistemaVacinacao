@@ -4,6 +4,11 @@ import java.util.List;
 
 import com.grad.sistemaVacinacao.model.Funcionario;
 
+/**
+ * O DAO para a entidade
+ * {@link package com.grad.sistemaVacinacao.model.Funcionario}.
+ * 
+ */
 public interface FuncionarioDao {
 
 	void save(Funcionario funcionario);

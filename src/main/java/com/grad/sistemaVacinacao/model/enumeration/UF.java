@@ -1,5 +1,9 @@
 package com.grad.sistemaVacinacao.model.enumeration;
 
+/**
+ * Enumeração das Unidades Federativas do Brasil
+ *
+ */
 public enum UF {
 
 	AC("AC", "Acre"), AL("AL", "Alagoas"), AM("AM", "Amazonas"), BA("BA", "Bahia"), CE("CE", "Ceará"),

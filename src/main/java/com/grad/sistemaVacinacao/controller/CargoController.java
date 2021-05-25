@@ -18,6 +18,8 @@ import com.grad.sistemaVacinacao.service.CargoService;
 
 /**
  * TODO alterar URL das paginas administrativas
+ * Classe controller referente à
+ * {@link com.grad.sistemaVacinacao.model.Cargo}.
  *
  */
 @Controller

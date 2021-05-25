@@ -12,6 +12,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Classe model referente à carteira de vacinação contém: atributos, equals e
+ * hashcode.Além dos construtores e getters/setters gerados pelo lombok.
+ * 
+ */
 @Data
 @Builder
 @AllArgsConstructor

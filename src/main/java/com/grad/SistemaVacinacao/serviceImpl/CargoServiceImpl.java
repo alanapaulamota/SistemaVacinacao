@@ -10,6 +10,9 @@ import com.grad.sistemaVacinacao.dao.CargoDao;
 import com.grad.sistemaVacinacao.model.Cargo;
 import com.grad.sistemaVacinacao.service.CargoService;
 
+/**
+ * Implementação de Serviço para gerenciamento de {@link Cargo}.
+ */
 @Transactional(readOnly = false)
 @Service
 public class CargoServiceImpl implements CargoService {

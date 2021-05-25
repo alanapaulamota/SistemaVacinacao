@@ -7,9 +7,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.grad.sistemaVacinacao.dao.FuncionarioDao;
+import com.grad.sistemaVacinacao.model.Cargo;
 import com.grad.sistemaVacinacao.model.Funcionario;
 import com.grad.sistemaVacinacao.service.FuncionarioService;
 
+/**
+ * Implementação de Serviço para gerenciamento de {@link Funcionario}.
+ */
 @Transactional(readOnly = false)
 @Service
 public class FuncionarioServiceImpl implements FuncionarioService {

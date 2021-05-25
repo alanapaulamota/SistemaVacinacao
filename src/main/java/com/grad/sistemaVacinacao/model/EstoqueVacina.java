@@ -22,6 +22,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Classe model referente ao estoque de vacina, contém: atributos, equals e
+ * hashcode.Além dos construtores e getters/setters gerados pelo lombok.
+ * 
+ */
 @Data
 @Builder
 @AllArgsConstructor
@@ -39,7 +44,7 @@ public class EstoqueVacina implements Serializable {
 	@NotNull
 	@Column(name = "nome")
 	private String nome;
-	
+
 	@NotNull
 	@Column(name = "quantidade")
 	private String quantidade;
@@ -63,6 +68,10 @@ public class EstoqueVacina implements Serializable {
 	@NotNull
 	@Column(name = "data")
 	private Date data;
+
+	@NotNull
+	@Column(name = "fabricante")
+	private String fabricante;
 
 	@NotNull
 	@Column(nullable = false)

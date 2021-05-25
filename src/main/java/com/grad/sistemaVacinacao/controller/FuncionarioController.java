@@ -17,6 +17,8 @@ import com.grad.sistemaVacinacao.service.FuncionarioService;
 
 /**
  * TODO alterar URL das paginas administrativas
+ * Classe controller referente à
+ * {@link com.grad.sistemaVacinacao.model.Funcionario}.
  *
  */
 @Controller

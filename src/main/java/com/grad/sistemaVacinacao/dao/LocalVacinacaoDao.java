@@ -4,6 +4,11 @@ import java.util.List;
 
 import com.grad.sistemaVacinacao.model.LocalVacinacao;
 
+/**
+ * O DAO para a entidade {@link package
+ * com.grad.sistemaVacinacao.model.LocalVacinacao}.
+ * 
+ */
 public interface LocalVacinacaoDao {
 
 	void save(LocalVacinacao localvacinacao);

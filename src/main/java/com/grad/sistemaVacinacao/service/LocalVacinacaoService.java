@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.grad.sistemaVacinacao.model.LocalVacinacao;
 
+/**
+ * Serviço para gerenciamento de
+ * {@link com.grad.sistemaVacinacao.model.LocalVacinacao}.
+ */
 public interface LocalVacinacaoService {
 
 	void salvar(LocalVacinacao localVacinacao);

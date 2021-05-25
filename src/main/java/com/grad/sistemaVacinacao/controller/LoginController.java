@@ -23,6 +23,12 @@ import com.grad.sistemaVacinacao.repository.UserRepository;
 import com.grad.sistemaVacinacao.service.EmailSenderService;
 import com.grad.sistemaVacinacao.service.UserService;
 
+/**
+ * TODO alterar URL das paginas administrativas
+ * Classe controller referente à
+ * {@link com.grad.sistemaVacinacao.model.User}.
+ *
+ */
 @Controller
 public class LoginController {
 

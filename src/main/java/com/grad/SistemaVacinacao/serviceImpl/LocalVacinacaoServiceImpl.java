@@ -7,9 +7,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.grad.sistemaVacinacao.dao.LocalVacinacaoDao;
+import com.grad.sistemaVacinacao.model.Funcionario;
 import com.grad.sistemaVacinacao.model.LocalVacinacao;
 import com.grad.sistemaVacinacao.service.LocalVacinacaoService;
 
+/**
+ * Implementação de Serviço para gerenciamento de {@link LocalVacinacao}.
+ */
 @Transactional(readOnly = false)
 @Service
 public class LocalVacinacaoServiceImpl implements LocalVacinacaoService {

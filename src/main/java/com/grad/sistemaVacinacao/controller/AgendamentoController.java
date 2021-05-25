@@ -20,7 +20,11 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.grad.sistemaVacinacao.model.Agendamento;
 import com.grad.sistemaVacinacao.repository.AgendamentoRepository;
 
-
+/**
+ * Classe controller referente à
+ * {@link com.grad.sistemaVacinacao.model.Agendamento}.
+ *
+ */
 @Controller
 //@RequestMapping("/agendamento")
 public class AgendamentoController {

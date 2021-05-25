@@ -5,8 +5,18 @@ import org.springframework.stereotype.Repository;
 
 import com.grad.sistemaVacinacao.model.Role;
 
+/**
+ * Repositório para gerenciamento de
+ * {@link com.grad.sistemaVacinacao.model.Role}.
+ */
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Integer> {
-    Role findByRole(String role);
+	/**
+	 * Método que busca a Role.
+	 * 
+	 * @param role A role
+	 * @return Retorna a Role.
+	 */
+	Role findByRole(String role);
 
 }

@@ -21,6 +21,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
+/**
+ * Classe model referente à local de vacinação, contém: atributos, equals e
+ * hashcode.Além dos construtores e getters/setters gerados pelo lombok.
+ * 
+ */
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
