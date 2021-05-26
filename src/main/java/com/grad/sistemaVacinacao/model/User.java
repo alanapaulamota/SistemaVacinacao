@@ -31,7 +31,7 @@ public class User {
 	@Column(name = "apelido")
 	@Length(min = 5, message = "*Seu nome de usuário deve ter pelo menos 5 caracteres")
 	@NotEmpty(message = "*Forneça um nome de usuário")
-	private String userName;
+	private String apelido;
 	@Column(name = "email")
 	@Email(message = "*Por favor forneça um email válido")
 	@NotEmpty(message = "*Forneça um email válido")
@@ -39,13 +39,13 @@ public class User {
 	@Column(name = "senha")
 	@Length(min = 5, message = "*Sua senha deve ter pelo menos 5 caracteres")
 	@NotEmpty(message = "*Por favor, forneça sua senha")
-	private String password;
+	private String senha;
 	@Column(name = "nome")
 	@NotEmpty(message = "*Por favor, forneça seu nome")
-	private String name;
+	private String nome;
 	@Column(name = "sobrenome")
 	@NotEmpty(message = "*Por favor, forneça sua sobrenome")
-	private String lastName;
+	private String sobreNome;
 	@Column(name = "active")
 	private Boolean active;
 	@ManyToMany(cascade = CascadeType.MERGE)

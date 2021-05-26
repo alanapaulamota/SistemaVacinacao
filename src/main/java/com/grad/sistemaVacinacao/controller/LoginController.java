@@ -24,8 +24,7 @@ import com.grad.sistemaVacinacao.service.EmailSenderService;
 import com.grad.sistemaVacinacao.service.UserService;
 
 /**
- * TODO alterar URL das paginas administrativas
- * Classe controller referente à
+ * TODO alterar URL das paginas administrativas Classe controller referente à
  * {@link com.grad.sistemaVacinacao.model.User}.
  *
  */
@@ -43,9 +42,8 @@ public class LoginController {
 
 	@Autowired
 	private EmailSenderService emailSenderService;
-	
-    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 
+	BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 
 	@GetMapping(value = { "/", "/login" })
 	public ModelAndView login() {
@@ -66,7 +64,7 @@ public class LoginController {
 	@PostMapping(value = "/registration")
 	public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
 		ModelAndView modelAndView = new ModelAndView();
-		User userExists = userService.findUserByUserName(user.getUserName());
+		User userExists = userService.findUserByUserName(user.getApelido());
 		if (userExists != null) {
 			bindingResult.rejectValue("userName", "error.user",
 					"Já existe um usuário registrado com o nome de usuário fornecido");
@@ -88,8 +86,8 @@ public class LoginController {
 		ModelAndView modelAndView = new ModelAndView();
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User user = userService.findUserByUserName(auth.getName());
-		modelAndView.addObject("userName", "Bem-Vindo " + user.getUserName() + "/" + user.getName() + " "
-				+ user.getLastName() + " (" + user.getEmail() + ")");
+		modelAndView.addObject("userName", "Bem-Vindo " + user.getApelido() + "/" + user.getNome() + " "
+				+ user.getSobreNome() + " (" + user.getEmail() + ")");
 		modelAndView.setViewName("/home");
 		return modelAndView;
 	}
@@ -98,9 +96,9 @@ public class LoginController {
 //	public ModelAndView homeAdmin() {
 //		ModelAndView modelAndView = new ModelAndView();
 //		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//		User user = userService.findUserByUserName(auth.getName());
-//		modelAndView.addObject("userName", "Bem-Vindo " + user.getUserName() + "/" + user.getName() + " "
-//				+ user.getLastName() + " (" + user.getEmail() + ")");
+//		User user = userService.findUserByUserName(auth.getNome());
+//		modelAndView.addObject("userName", "Bem-Vindo " + user.getApelido() + "/" + user.getNome() + " "
+//				+ user.getSobrenome() + " (" + user.getEmail() + ")");
 //		modelAndView.addObject("adminMessage", "Conteúdo disponível apenas para usuários com função administrativa");
 //		modelAndView.setViewName("admin/home");
 //		return modelAndView;
@@ -169,7 +167,7 @@ public class LoginController {
 		if (user.getEmail() != null) {
 			// Use email to find user
 			User tokenUser = userRepository.findByEmail(user.getEmail());
-			tokenUser.setPassword(encoder.encode(user.getPassword()));
+			tokenUser.setSenha(encoder.encode(user.getSenha()));
 			userRepository.save(tokenUser);
 			modelAndView.addObject("message",
 					"Senha redefinida com sucesso. Agora você pode fazer login com as novas credenciais ");

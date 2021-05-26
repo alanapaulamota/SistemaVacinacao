@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Cadastre-se</title>
+<title>Dados</title>
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/registration.css}" />
 <link rel="stylesheet"
@@ -47,56 +47,96 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
-				<form autocomplete="off" action="#" th:action="@{/registration}"
+				<form autocomplete="off" action="#" th:action="@{/dados}"
 					th:object="${user}" method="post" class="form-horizontal"
 					role="form">
-					<h2>Cadastro</h2>
+					<h2>Complemente seus dados AQUI!</h2>
 					<div class="form-group">
 						<div class="col-sm-9">
-							<label th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"
-								class="validation-message"></label> <input type="text"
-								th:field="*{nome}" placeholder="nome" class="form-control" />
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="col-sm-9">
-							<label th:if="${#fields.hasErrors('sobrenome')}"
-								th:errors="*{sobrenome}" class="validation-message"></label> <input
-								type="text" th:field="*{sobrenome}" placeholder="Last nome"
-								class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-9">
-							<input type="text" th:field="*{email}" placeholder="Email"
-								class="form-control" /> <label
-								th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+							<input type="text" th:field="*{data}"
+								placeholder="Data de Nascimento" class="form-control" /> <label
+								th:if="${#fields.hasErrors('data')}" th:errors="*{data}"
 								class="validation-message"></label>
 						</div>
 					</div>
-					<div class="form-group">
+					
+							<div class="form-group">
 						<div class="col-sm-9">
-							<input type="text" th:field="*{apelido}" placeholder="User nome"
-								class="form-control" /> <label
-								th:if="${#fields.hasErrors('apelido')}" th:errors="*{apelido}"
+							<input type="text" th:field="*{telefone}"
+								placeholder="Telefone" class="form-control" /> <label
+								th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"
 								class="validation-message"></label>
 						</div>
 					</div>
+					
 					<div class="form-group">
 						<div class="col-sm-9">
-							<input type="text" th:field="*{cpf}" placeholder="CPF"
+							<input type="text" th:field="*{sexo}" placeholder="Sexo"
 								class="form-control" /> <label
-								th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}"
+								th:if="${#fields.hasErrors('sexo')}" th:errors="*{sexo}"
 								class="validation-message"></label>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-9">
-							<input type="senha" th:field="*{senha}"
-								placeholder="senha" class="form-control" /> <label
-								th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"
+							<input type="text" th:field="*{endereço}" placeholder="Endereço"
+								class="form-control" /> <label
+								th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}"
+								class="validation-message"></label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="text" th:field="*{complemento}"
+								placeholder="Complemento" class="form-control" /> <label
+								th:if="${#fields.hasErrors('complemento')}"
+								th:errors="*{complemento}" class="validation-message"></label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="text" th:field="*{cep}" placeholder="cep"
+								class="form-control" /> <label
+								th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}"
+								class="validation-message"></label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="text" th:field="*{cep}" placeholder="cep"
+								class="form-control" /> <label
+								th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}"
+								class="validation-message"></label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="text" th:field="*{mae}" placeholder="Nome da mãe"
+								class="form-control" /> <label
+								th:if="${#fields.hasErrors('mãe')}" th:errors="*{mãe}"
+								class="validation-message"></label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="text" th:field="*{pai}" placeholder="Nome do pai"
+								class="form-control" /> <label
+								th:if="${#fields.hasErrors('pai')}" th:errors="*{pai}"
+								class="validation-message"></label>
+						</div>
+					</div>
+					
+						<div class="form-group">
+						<div class="col-sm-9">
+							<input type="text" th:field="*{cartaoSus}" placeholder="Cartão Sus"
+								class="form-control" /> <label
+								th:if="${#fields.hasErrors('cartaoSus')}" th:errors="*{cartaoSus}"
 								class="validation-message"></label>
 						</div>
 					</div>
@@ -104,7 +144,7 @@
 					<div class="form-group">
 						<div class="col-sm-9">
 							<button type="submit" class="btn btn-primary btn-block">Registrar
-								Usuário</button>
+								Dados</button>
 						</div>
 					</div>
 

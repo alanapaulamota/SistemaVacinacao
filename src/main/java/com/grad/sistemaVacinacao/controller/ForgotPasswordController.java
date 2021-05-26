@@ -98,7 +98,7 @@ public class ForgotPasswordController {
 			// use email to find user
 			User tokenUser = userRepository.findByEmail(user.getEmail());
 			tokenUser.setActive(true);
-			tokenUser.setPassword(encoder.encode(user.getPassword()));
+			tokenUser.setSenha(encoder.encode(user.getSenha()));
 			// System.out.println(tokenUser.getPassword());
 			userRepository.save(tokenUser);
 			modelAndView.addObject("message",
