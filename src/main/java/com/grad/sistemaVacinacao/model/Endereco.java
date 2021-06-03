@@ -4,6 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.grad.sistemaVacinacao.model.enumeration.UF;
@@ -14,8 +17,8 @@ import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 /**
- * Classe model referente ao endereço, contém: atributos, equals e
- * hashcode.Além dos construtores e getters/setters gerados pelo lombok.
+ * Classe model referente ao endereço, contém: atributos, equals e hashcode.Além
+ * dos construtores e getters/setters gerados pelo lombok.
  * 
  */
 @Builder
@@ -24,6 +27,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "endereco")
 @Entity
 public class Endereco {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	Long id;
 
 	@NotNull
 	@Column(nullable = false)

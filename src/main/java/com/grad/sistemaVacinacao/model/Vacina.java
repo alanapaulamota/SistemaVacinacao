@@ -2,11 +2,14 @@ package com.grad.sistemaVacinacao.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -46,7 +49,12 @@ public class Vacina implements Serializable {
 	@Column(name = "dose")
 	private String dose;
 
-	@NotNull
-	private EstoqueVacina estoqueV;
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "id_estoque_vacina")
+	private Vacina vacina;
+
+//	@ManyToMany(cascade = CascadeType.MERGE)
+//	@JoinTable(name = "estoque_vacina", joinColumns = @JoinColumn(name = "vacina_id"), inverseJoinColumns = @JoinColumn(name = "estoque_vacina_id"))
+//	private Set<EstoqueVacina> estoqueVacinas;
 
 }

@@ -5,6 +5,9 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -25,8 +28,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "carteira")
 public class CarteiraVacinacao {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Long id;
+	Long id;
+	
 	private User usuario;
 	private List<ItemCarteiraVacinacao> vacinacoes;
 

@@ -38,7 +38,7 @@ public class EstoqueVacina implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "id_estoque_vacina")
 	private Long id;
 
 	@NotNull

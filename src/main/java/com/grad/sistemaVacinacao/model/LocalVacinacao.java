@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -49,21 +50,7 @@ public class LocalVacinacao {
 	@Enumerated(EnumType.STRING)
 	private TipoVacina tipoVacina;
 
-	@OneToMany(mappedBy = "localvacinacao")
+	@OneToMany(mappedBy = "localVacinacao", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Cargo> cargos;
-
-	/**
-	 * @return the cargos
-	 */
-	public List<Cargo> getCargos() {
-		return cargos;
-	}
-
-	/**
-	 * @param cargos the cargos to set
-	 */
-	public void setCargos(List<Cargo> cargos) {
-		this.cargos = cargos;
-	}
 
 }

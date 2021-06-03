@@ -5,6 +5,9 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Length;
@@ -28,8 +31,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "carteira_dependente")
 public class CarteiraVacinacaoDependente {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Long id;
+	Long id;
+	
 	@Column(name = "nome")
 	private String nome;
 
