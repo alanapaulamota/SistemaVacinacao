@@ -32,7 +32,7 @@ public class UserServiceTest {
 	public void setUp() {
 		initMocks(this);
 		userServiceUnderTest = new UserService(mockUserRepository, mockRoleRepository, mockBCryptPasswordEncoder);
-		user = User.builder().id(1).name("Alana").lastName("Paula").email("test@test.com").build();
+		user = User.builder().id(1).nome("Alana").sobreNome("Paula").email("test@test.com").build();
 
 		Mockito.when(mockUserRepository.save(any())).thenReturn(user);
 		Mockito.when(mockUserRepository.findByEmail(anyString())).thenReturn(user);
