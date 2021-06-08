@@ -45,7 +45,10 @@ public class User {
 	private String nome;
 	@Column(name = "sobrenome")
 	@NotEmpty(message = "*Por favor, forneça sua sobrenome")
-	private String sobreNome;
+	private String sobrenome;
+	@Column(name = "cpf")
+	@NotEmpty(message = "*Por favor, forneça seu cpf")
+	private String cpf;
 	@Column(name = "active")
 	private Boolean active;
 	@ManyToMany(cascade = CascadeType.MERGE)
