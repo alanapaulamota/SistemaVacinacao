@@ -41,13 +41,13 @@ td, th {
   border: 1px solid #ccc;
   text-align: center;
   margin-top: 10px;
-  border-color: #F08080;
+  border-color: rgb(244, 17, 235);
 
 
 }
 th {
-  background: #F08080;
-  border-color: white;
+  background: #87cefa;
+  border-color: rgb(32, 74, 135);
   ;
 }
 

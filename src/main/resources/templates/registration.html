@@ -13,116 +13,120 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-	<!--Navbar da P�gina-->
-	<nav class="navbar navbar-expand-lg navbar-dark justify-content-end"
-		style="height: 60px; background-color: #39bcb6;">
-		<!--Imagem Logo SNV-->
-		<!--<a class="navbar-brand" href="#">
+	<div class="login-page"
+		style="background-image: url('../images/maisClaro.jpeg'); background-size: 100% 100%; height: 50vw;">
+		<!--Navbar da P�gina-->
+		<nav class="navbar navbar-expand-lg navbar-dark justify-content-end"
+			style="height: 60px; background-color: #39bcb6;">
+			<!--Imagem Logo SNV-->
+			<!--<a class="navbar-brand" href="#">
         <img src="img/zegotao.png" width="35" height="80" alt="Logo SNV" title="Logo SNV">
       </a>-->
-		<!-- 		<form method="POST" modelAttribute="userForm" class="form-signin"> -->
+			<!-- 		<form method="POST" modelAttribute="userForm" class="form-signin"> -->
 
-		<!-- 			<!--navbar-->
-		<!-- 			<div class="nav justify-content-end" id="navbarSite"> -->
-		<!-- 				<ul class="nav justify-content-end "> -->
+			<!-- 			<!--navbar-->
+			<!-- 			<div class="nav justify-content-end" id="navbarSite"> -->
+			<!-- 				<ul class="nav justify-content-end "> -->
 
-		<!-- 					<li> -->
-		<!-- 						<form th:action="@{/login}" method="post"> -->
-		<!-- 							<button class="btn btn-md btn-cadastro btn-lg" type="Submit">Página -->
-		<!-- 								Inicial</button> -->
-		<!-- 						</form> -->
-		<!-- 					</li> -->
-		<!-- 				</ul> -->
-		<!-- 			</div> -->
-		<!-- 		</form> -->
+			<!-- 					<li> -->
+			<!-- 						<form th:action="@{/login}" method="post"> -->
+			<!-- 							<button class="btn btn-md btn-cadastro btn-lg" type="Submit">Página -->
+			<!-- 								Inicial</button> -->
+			<!-- 						</form> -->
+			<!-- 					</li> -->
+			<!-- 				</ul> -->
+			<!-- 			</div> -->
+			<!-- 		</form> -->
 
-		<form th:action="@{/login}" method="get">
-			<button class="btn btn-md btn-cadastro btn-lg" type="Submit">Voltar
-				para tela Inicial</button>
-		</form>
-	</nav>
+			<form th:action="@{/login}" method="get">
+				<button class="btn btn-md btn-cadastro btn-lg" type="Submit">Voltar
+					para tela de Login</button>
+			</form>
+		</nav>
 
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<form autocomplete="off" action="#" th:action="@{/registration}"
-					th:object="${user}" method="post" class="form-horizontal"
-					role="form">
-					<h2>Cadastro</h2>
-					<div class="form-group">
-						<div class="col-sm-9">
-							<label th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"
-								class="validation-message"></label> <input type="text"
-								th:field="*{nome}" placeholder="nome" class="form-control" />
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<form autocomplete="off" action="#" th:action="@{/registration}"
+						th:object="${user}" method="post" class="form-horizontal"
+						role="form">
+						<h2>Cadastro</h2>
+						<div class="form-group">
+							<div class="col-sm-9">
+								<label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+									class="validation-message"></label> <input type="text"
+									th:field="*{name}" placeholder="Nome" class="form-control" />
+							</div>
 						</div>
-					</div>
 
-					<div class="form-group">
-						<div class="col-sm-9">
-							<label th:if="${#fields.hasErrors('sobrenome')}"
-								th:errors="*{sobrenome}" class="validation-message"></label> <input
-								type="text" th:field="*{sobrenome}" placeholder="Last nome"
-								class="form-control" />
+						<div class="form-group">
+							<div class="col-sm-9">
+								<label th:if="${#fields.hasErrors('lastName')}"
+									th:errors="*{lastName}" class="validation-message"></label> <input
+									type="text" th:field="*{lastName}" placeholder="Sobrenome"
+									class="form-control" />
+							</div>
 						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-9">
-							<input type="text" th:field="*{email}" placeholder="Email"
-								class="form-control" /> <label
-								th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
-								class="validation-message"></label>
+						<div class="form-group">
+							<div class="col-sm-9">
+								<input type="text" th:field="*{email}" placeholder="Email"
+									class="form-control" /> <label
+									th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+									class="validation-message"></label>
+							</div>
 						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-9">
-							<input type="text" th:field="*{apelido}" placeholder="User nome"
-								class="form-control" /> <label
-								th:if="${#fields.hasErrors('apelido')}" th:errors="*{apelido}"
-								class="validation-message"></label>
+						<div class="form-group">
+							<div class="col-sm-9">
+								<input type="text" th:field="*{userName}" placeholder="Apelido"
+									class="form-control" /> <label
+									th:if="${#fields.hasErrors('userName')}"
+									th:errors="*{userName}" class="validation-message"></label>
+							</div>
 						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-9">
-							<input type="text" th:field="*{cpf}" placeholder="CPF"
-								class="form-control" /> <label
-								th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}"
-								class="validation-message"></label>
+						<div class="form-group">
+							<div class="col-sm-9">
+								<input type="text" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+									title="Digite um CPF no formato: xxx.xxx.xxx-xx"
+									th:field="*{cpf}" placeholder="CPF" class="form-control" /> <label
+									th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}"
+									class="validation-message"></label>
+							</div>
 						</div>
-					</div>
 
-					<div class="form-group">
-						<div class="col-sm-9">
-							<input type="senha" th:field="*{senha}"
-								placeholder="senha" class="form-control" /> <label
-								th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"
-								class="validation-message"></label>
+						<div class="form-group">
+							<div class="col-sm-9">
+								<input type="password" th:field="*{password}"
+									placeholder="Senha" class="form-control" /> <label
+									th:if="${#fields.hasErrors('password')}"
+									th:errors="*{password}" class="validation-message"></label>
+							</div>
 						</div>
-					</div>
 
-					<div class="form-group">
-						<div class="col-sm-9">
-							<button type="submit" class="btn btn-primary btn-block">Registrar
-								Usuário</button>
+						<div class="form-group">
+							<div class="col-sm-9">
+								<button type="submit" class="btn bnt-registrar btn-block">Registrar
+									Usuário</button>
+							</div>
 						</div>
-					</div>
 
-					<h2>
-						<span class="text-success" th:utext="${successMessage}"></span>
-					</h2>
+						<h2>
+							<span class="text-success" th:utext="${successMessage}"></span>
+						</h2>
 
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- Rodapé-->
-	<div class="container-fluid pt-3 navbar-fixed-bottom"
-		id="container-rodape" style="background-color: #39bcb6; color: white">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-				style="font-size: 13px; text-align: center">
-				<p>SNV 2021 © Todos os direitos reservados</p>
+		<!-- Rodapé-->
+		<div class="container-fluid pt-3 navbar-fixed-bottom"
+			id="container-rodape" style="background-color: #39bcb6; color: white">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+					style="font-size: 13px; text-align: center">
+					<p>SNV 2021 © Todos os direitos reservados</p>
+				</div>
 			</div>
 		</div>
 	</div>

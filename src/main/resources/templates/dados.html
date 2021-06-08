@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Dados</title>
+<title>Cadastre-se</title>
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/registration.css}" />
 <link rel="stylesheet"
@@ -50,7 +50,7 @@
 				<form autocomplete="off" action="#" th:action="@{/dados}"
 					th:object="${user}" method="post" class="form-horizontal"
 					role="form">
-					<h2>Complemente seus dados AQUI!</h2>
+					<h2>Cadastro</h2>
 					<div class="form-group">
 						<div class="col-sm-9">
 							<input type="text" th:field="*{data}"
@@ -148,9 +148,9 @@
 						</div>
 					</div>
 
-					<h2>
-						<span class="text-success" th:utext="${successMessage}"></span>
-					</h2>
+<!-- 					<h2> -->
+<!-- 						<span class="text-success" th:utext="${successMessage}"></span> -->
+<!-- 					</h2> -->
 
 				</form>
 			</div>

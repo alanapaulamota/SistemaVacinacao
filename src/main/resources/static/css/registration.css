@@ -24,6 +24,15 @@
 	font-weight: bolder;
 }
 
+.container {
+	padding-top: 158px;
+}
+
+.bnt-registrar {
+	background-color: #4E598F !important;
+	color: #fff;
+}
+
 body {
 	background-color: rgba(196, 196, 196, 0.63) !important;
 	margin: 0px;
@@ -36,4 +45,8 @@ body {
 
 .btn-lg:hover {
 	text-decoration: underline;
+}
+
+.btn-cadastro {
+	color: #000;
 }

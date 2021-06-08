@@ -14,6 +14,10 @@
 		<h1>
 			<a> Agendamento de vacinas </a>
 		</h1>
+		<form th:action="@{/home}" method="get">
+			<button class="btn btn-md btn-home btn-lg" type="Submit">Voltar
+				para tela Inicial</button>
+		</form>
 	</div>
 
 	<div class="main">
@@ -25,10 +29,10 @@
 				<div class="toolbar">
 					<div class="toolbar-item">
 						<label><input type="checkbox" id="weekends"
-							checked="checked"> Mostrar Finais de Semana</label>
+							checked="checked"> Mostrar Final de semana</label>
 					</div>
 					<div class="toolbar-item">
-						Exportar como: &nbsp; <select id="format">
+						Export as: &nbsp; <select id="format">
 							<option value="svg">SVG</option>
 							<option value="jpeg">JPEG</option>
 							<option value="png">PNG</option>
@@ -78,7 +82,7 @@
 							success : function(ajax) {
 								var data = ajax.data;
 								dp.events.add(data);
-								dp.message("Evento Criado");
+								dp.message("Event created");
 							},
 
 						})
@@ -95,7 +99,7 @@
 				url : '/agendamento/move',
 				data : params,
 				success : function(ajax) {
-					dp.message("Alterado");
+					dp.message("Moved");
 				},
 			})
 		};
@@ -110,7 +114,7 @@
 				url : '/agendamento/move',
 				data : params,
 				success : function(ajax) {
-					dp.message("Redimensionado");
+					dp.message("Resized");
 				},
 			});
 		};

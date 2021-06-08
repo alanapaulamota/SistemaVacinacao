@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
@@ -6,7 +7,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Sobre nós</title>
+<title>Sobre Nós</title>
 
 <link rel="stylesheet" type="text/css" th:href="@{/css/estilosobre.css}" />
 <link rel="stylesheet"
@@ -27,74 +28,84 @@
 
 <body>
 	<!--Navbar da Página-->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-dark "
-		style="background-color: #39bcb6; padding: 15px;">
+	<!--Navbar da P�gina-->
+	<nav class="navbar navbar-expand-lg navbar-dark justify-content-end"
+		style="height: 60px; background-color: #39bcb6;">
+		<!--Imagem Logo SNV-->
+		<!--<a class="navbar-brand" href="#">
+        <img src="img/zegotao.png" width="35" height="80" alt="Logo SNV" title="Logo SNV">
+      </a>-->
+		<!-- 		<form method="POST" modelAttribute="userForm" class="form-signin"> -->
 
-		<!--Botão collapse navbar-->
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSite" style="background-color: black;">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+		<!-- 			<!--navbar-->
+		<!-- 			<div class="nav justify-content-end" id="navbarSite"> -->
+		<!-- 				<ul class="nav justify-content-end "> -->
 
-		<div class="collapse navbar-collapse" id="navbarSite">
+		<!-- 					<li> -->
+		<!-- 						<form th:action="@{/login}" method="post"> -->
+		<!-- 							<button class="btn btn-md btn-cadastro btn-lg" type="Submit">Página -->
+		<!-- 								Inicial</button> -->
+		<!-- 						</form> -->
+		<!-- 					</li> -->
+		<!-- 				</ul> -->
+		<!-- 			</div> -->
+		<!-- 		</form> -->
 
-			<ul class="navbar-nav mr-auto">
-				<!--Dropdown Item Navbar -->
-
-
-				<!--1 início-->
-				<li class="nav-item">&nbsp<a href="home.html"
-					style="color: #ffff; font-family: arial; font-size: 1.25em;">Home</a>&nbsp&nbsp&nbsp&nbsp
-				</li>
-
-				<!--2 agendamento-->
-<!-- 				<li class="nav-item">&nbsp&nbsp<a href="#" -->
-<!-- 					style="color: #ffff; font-family: arial; font-size: 1.25em;">Agendamento</a>&nbsp&nbsp&nbsp&nbsp -->
-<!-- 				</li> -->
-
-<!-- 				3 Altere seus Dados -->
-<!-- 				<li class="nav-item">&nbsp&nbsp<a href="AltDados.html" -->
-<!-- 					style="color: #ffff; font-size: 1.25em; font-family: arial;">Altere -->
-<!-- 						seus dados</a>&nbsp&nbsp&nbsp&nbsp -->
-<!-- 				</li> -->
-
-<!-- 				4 Carteira de Vacinação -->
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" id="dropdownSite" -->
-<!-- 					data-toggle="dropdown" -->
-<!-- 					style="font-size: 1.25em; padding-top: 0px;; color: #ffff; font-family: arial;">&nbsp -->
-<!-- 						Carteira de vacinação &nbsp</a> -->
-<!-- 					<div class="dropdown-menu"> -->
-<!-- 						<a class="dropdown-item" href="carteira.html">Carteira de -->
-<!-- 							Vacinação</a> <a class="dropdown-item" href="carteirainfantil.html">Carteira -->
-<!-- 							de Vacinação Infantil</a> -->
-<!-- 					</div></li> -->
-
-<!-- 			</ul> -->
+		<form th:action="@{/home}" method="get">
+			<button class="btn btn-md btn-home btn-lg" type="Submit">Voltar
+				para tela Inicial</button>
+		</form>
+	</nav>
 
 
-<!-- 			<ul class="navbar-nav ml-auto"> -->
+	<!--2 agendamento-->
+	<!-- 				<li class="nav-item">&nbsp&nbsp<a href="#" -->
+	<!-- 					style="color: #ffff; font-family: arial; font-size: 1.25em;">Agendamento</a>&nbsp&nbsp&nbsp&nbsp -->
+	<!-- 				</li> -->
 
-<!-- 				Sobre -->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<button class="btn fa fa-question-circle" -->
-<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
-<!-- 						<a href="sobre.html" style="color: #ffff; font-family: arial;"> -->
-<!-- 							Sobre</a> -->
-<!-- 					</button> -->
-<!-- 				</li> -->
+	<!-- 				3 Altere seus Dados -->
+	<!-- 				<li class="nav-item">&nbsp&nbsp<a href="AltDados.html" -->
+	<!-- 					style="color: #ffff; font-size: 1.25em; font-family: arial;">Altere -->
+	<!-- 						seus dados</a>&nbsp&nbsp&nbsp&nbsp -->
+	<!-- 				</li> -->
 
-				<!--Contate-nos-->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<button class="btn fa fa-phone-square" -->
-<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
-<!-- 						<a href="faleconosco.html" -->
-<!-- 							style="color: #ffff; font-family: arial;"> Contate-nos</a> -->
-<!-- 					</button> -->
-<!-- 				</li> -->
-			</ul>
+	<!-- 				4 Carteira de Vacinação -->
+	<!-- 				<li class="nav-item dropdown"><a -->
+	<!-- 					class="nav-link dropdown-toggle" href="#" id="dropdownSite" -->
+	<!-- 					data-toggle="dropdown" -->
+	<!-- 					style="font-size: 1.25em; padding-top: 0px;; color: #ffff; font-family: arial;">&nbsp -->
+	<!-- 						Carteira de vacinação &nbsp</a> -->
+	<!-- 					<div class="dropdown-menu"> -->
+	<!-- 						<a class="dropdown-item" href="carteira.html">Carteira de -->
+	<!-- 							Vacinação</a> <a class="dropdown-item" href="carteirainfantil.html">Carteira -->
+	<!-- 							de Vacinação Infantil</a> -->
+	<!-- 					</div></li> -->
 
-		</div>
+	<!-- 			</ul> -->
+
+
+	<!-- 			<ul class="navbar-nav ml-auto"> -->
+
+	<!-- 				Sobre -->
+	<!-- 				<li class="nav-item"> -->
+	<!-- 					<button class="btn fa fa-question-circle" -->
+	<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
+	<!-- 						<a href="sobre.html" style="color: #ffff; font-family: arial;"> -->
+	<!-- 							Sobre</a> -->
+	<!-- 					</button> -->
+	<!-- 				</li> -->
+
+	<!--Contate-nos-->
+	<!-- 				<li class="nav-item"> -->
+	<!-- 					<button class="btn fa fa-phone-square" -->
+	<!-- 						style="background-color: #39bcb6; color: black; font-size: 1.25em; padding: 10px;"> -->
+	<!-- 						<a href="faleconosco.html" -->
+	<!-- 							style="color: #ffff; font-family: arial;"> Contate-nos</a> -->
+	<!-- 					</button> -->
+	<!-- 				</li> -->
+	</ul>
+
+	</div>
 
 	</nav>
 
@@ -107,14 +118,25 @@
 	<div class="container-fluid" style="width: 90%">
 		<h1>Sobre</h1>
 		<br>
-		<h4>Devido às condições atuais com o novo Coronavírus, nós
-			desenvolvemos o Sistema Nacional de Vacinação(SNV) com intuito de
-			facilitar o agendamento das vacinas de forma online e diminuir o
-			tempo de espera nas filas.</h4>
-		<br>
-		<h4>O SNV pode ser acessado de qualquer dispositivo com conexão
-			com a internet e nele o paciente pode agendar sua vacina no posto
-			mais próximo de sua região.</h4>
+		<h3>
+			É fato que a evolução da tecnologia é bastante progressiva.
+			Entretanto, estamos diante de um novo cenário mundial crescente: o
+			COVID 19, lockdown e a pandemia. O cenário pandêmico mundial vem se
+			alastrando, os números de mortes são descomunais. No Brasil, a falta
+			de vacinação, de leitos e o descompromisso com a sociedade são fatos
+			que apesar de causar revolta, também é normalizado pela população. O
+			ano de 2021 começou com o “pé esquerdo” quando leva-se em
+			consideração a vida daqueles que se foram por não resistir ao vírus,
+			como também daqueles que esperam esperançosamente pela vacina para
+			todos.<br> Devido a esse cenário, o Sistema de Vacinação
+			Nacional surge com o objetivo de auxiliar o usuário no agendamento de
+			vacinação (não somente do COVID), buscando por locais de vacinação
+			mais próximos e horários vagos. Além de tornar a caderneta de
+			vacinação digital de jovens, adultos e dependentes. O sistema também
+			apresenta as principais informações sobre saúde e vacinações. Desta
+			forma, o SNV é a forma que nós, desenvolvedores, em meio ao cenário
+			atual, conseguimos demostrar compaixão e empatia pelo próximo.
+		</h3>
 		<br> <br> <br> <br> <br>
 
 
@@ -123,18 +145,19 @@
 
 
 
-		<div class="accordion" id="accordionExample">
+		<div class="accordion" id="accordionExample" style="font-size: 15px">
 			<div class="card">
 				<div class="card-header" id="headingOne">
 					<h5 class="mb-0">
 						<button class="btn btn-link" type="button" data-toggle="collapse"
 							data-target="#collapseOne" aria-expanded="true"
-							aria-controls="collapseOne">Como realizo meu cadastro?</button>
+							aria-controls="collapseOne" style="font-size: 15px">Como
+							realizo meu cadastro?</button>
 					</h5>
 				</div>
 
-				<div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-					data-parent="#accordionExample">
+				<div style="font-size: 15px" id="collapseOne" class="collapse"
+					aria-labelledby="headingOne" data-parent="#accordionExample">
 					<div class="card-body">&nbsp&nbsp&nbsp Na página inicial de
 						nosso site para novos pacientes há uma opção de "Cadastre-se aqui"
 						onde é possivel realizar o cadastro.</div>
@@ -145,8 +168,9 @@
 					<h5 class="mb-0">
 						<button class="btn btn-link collapsed" type="button"
 							data-toggle="collapse" data-target="#collapseTwo"
-							aria-expanded="false" aria-controls="collapseTwo">Tem
-							algum custo para realizar o agendamento?</button>
+							aria-expanded="false" aria-controls="collapseTwo"
+							style="font-size: 15px">Tem algum custo para realizar o
+							agendamento?</button>
 					</h5>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -159,8 +183,8 @@
 			<div class="card">
 				<div class="card-header" id="headingThree">
 					<h5 class="mb-0">
-						<button class="btn btn-link collapsed" type="button"
-							data-toggle="collapse" data-target="#collapseThree"
+						<button style="font-size: 15px" class="btn btn-link collapsed"
+							type="button" data-toggle="collapse" data-target="#collapseThree"
 							aria-expanded="false" aria-controls="collapseThree">
 							Como realizo meu agendamento?</button>
 					</h5>
@@ -175,8 +199,8 @@
 			<div class="card">
 				<div class="card-header" id="headingFour">
 					<h5 class="mb-0">
-						<button class="btn btn-link collapsed" type="button"
-							data-toggle="collapse" data-target="#collapseFour"
+						<button style="font-size: 15px" class="btn btn-link collapsed"
+							type="button" data-toggle="collapse" data-target="#collapseFour"
 							aria-expanded="false" aria-controls="collapseThree">
 							Como atualizar meus dados?</button>
 					</h5>

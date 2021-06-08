@@ -227,6 +227,7 @@ body {
 
 .panel-heading {
 	font-size: large;
+	margin-left: 200px;
 }
 
 .nav-item {
