@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> -->
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Vacinas</title>
@@ -111,7 +112,36 @@
 			</div>
 
 			<div class="container" id="cadastro">
-				<form action="/funcionarios/salvar" method="POST">
+
+
+				<!-- 				<form:form method="POST" action="/vacinas/cadastrar" -->
+				<!-- 					modelAttribute="vacina"> -->
+				<!-- 					<table> -->
+				<!-- 						<tr> -->
+				<!-- 							<td><form:label path="nome">Nome da Vacina</form:label></td> -->
+				<!-- 							<td><form:input path="nome" /></td> -->
+				<!-- 						</tr> -->
+				<!-- 						<tr> -->
+				<!-- 							<td><form:label path="fabricante">Fabricante</form:label></td> -->
+				<!-- 							<td><form:input path="fabricante" /></td> -->
+				<!-- 						</tr> -->
+				<!-- 						<tr> -->
+				<!-- 							<td><form:label path="tipo">Tipo</form:label></td> -->
+				<!-- 							<td><form:input path="tipo" /></td> -->
+				<!-- 						</tr> -->
+				<!-- 						<tr> -->
+				<!-- 							<td><form:label path="fornecedor">Fornecedor</form:label></td> -->
+				<!-- 							<td><form:input path="fornecedor" /></td> -->
+				<!-- 						</tr> -->
+				<!-- 						<tr> -->
+				<!-- 							<td><input type="submit" value="Submit" /></td> -->
+				<!-- 						</tr> -->
+				<!-- 					</table> -->
+				<!-- 				</form:form> -->
+
+
+
+				<form action="/vacinas/cadastrar" method="POST">
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="nome">Nome da Vacina</label> <input type="text"
@@ -119,6 +149,8 @@
 								autofocus="autofocus" name="nome" value="" />
 							<div class="invalid-feedback"></div>
 						</div>
+					</div>
+					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="fabricante">Fabricante</label> <input type="text"
 								class="form-control" id="fabricante"
@@ -134,72 +166,33 @@
 								name="dataEntrada" value="" />
 							<div class="invalid-feedback"></div>
 						</div>
-						<!-- 						<div class="form-group col-md-6"> -->
-						<!-- 							<label for="dataSaida">Data de Saída</label> <input type="date" -->
-						<!-- 								class="form-control" id="dataSaida" name="dataSaida" value="" /> -->
-						<!-- 							<div class="invalid-feedback"></div> -->
-						<!-- 						</div> -->
-						<!-- 					</div> -->
-						<div class="form-row">
-							<div class="form-group col-md-6">
-								<label for="cargo">Tipo</label> <select id="cargo"
-									class="form-control" name="cargo">
-									<option value="">Selecione...</option>
-									<option value="1">HEPATITE</option>
-									<option value="2">SARAMPO</option>
-									<option value="3">COVID</option>
-									<option value="4">ABCDE</option>
-									<option value="5">FGHIJK</option>
-									<!-- 								<option value="9">Auxiliar de RH</option> -->
-									<!-- 								<option value="10">Coordenador de RH</option> -->
-									<!-- 								<option value="11">Psicologo</option> -->
-								</select>
-								<div class="invalid-feedback"></div>
-							</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="tipo">Tipo</label> <select id="tipo"
+								class="form-control" name="tipo">
+								<option value="">Selecione...</option>
+								<option value="1">HEPATITE</option>
+								<option value="2">SARAMPO</option>
+								<option value="3">COVID</option>
+								<option value="4">ABCDE</option>
+								<option value="5">FGHIJK</option>
+								<option value="9">Auxiliar de RH</option>
+								<option value="10">Coordenador de RH</option>
+								<option value="11">Psicologo</option>
+							</select>
+							<div class="invalid-feedback"></div>
 						</div>
-						<div class="form-row">
-							<div class="form-group col-md-6">
-								<label for="fornecedor">Fornecedor</label> <input type="text"
-									class="form-control" id="fabricante" name="fornecedor" value="" />
-								<div class="invalid-feedback"></div>
-							</div>
-							<!-- 						<div class="form-group col-md-6"> -->
-							<!-- 							<label for="logradouro">Logradouro</label> <input type="text" -->
-							<!-- 								class="form-control" id="logradouro" -->
-							<!-- 								placeholder="logradouro sem número" name="endereco.logradouro" -->
-							<!-- 								value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 					</div> -->
-							<!-- 					<div class="form-row"> -->
-							<!-- 						<div class="form-group col-md-6"> -->
-							<!-- 							<label for="numero">Número</label> <input type="text" -->
-							<!-- 								class="form-control" id="numero" name="endereco.numero" value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 						<div class="form-group col-md-6"> -->
-							<!-- 							<label for="complemento">Complemento</label> <input type="text" -->
-							<!-- 								class="form-control" id="complemento" -->
-							<!-- 								placeholder="fundos, casa, AP. 102, .." -->
-							<!-- 								name="endereco.complemento" value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 					</div> -->
-							<!-- 					<div class="form-row"> -->
-							<!-- 						<div class="form-group col-md-6"> -->
-							<!-- 							<label for="bairro">Bairro</label> <input type="text" -->
-							<!-- 								class="form-control" id="bairro" name="endereco.bairro" value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 						<div class="form-group col-md-2"> -->
-							<!-- 							<label for="cep">Cep</label> <input type="text" -->
-							<!-- 								class="form-control" id="cep" data-mask="00000-000" -->
-							<!-- 								name="endereco.cep" value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 					</div> -->
-							<input type="hidden" id="id" name="id" value="" />
-							<button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="fornecedor">Fornecedor</label> <input type="text"
+								class="form-control" id="fabricante" name="fornecedor" value="" />
+							<div class="invalid-feedback"></div>
+						</div>
+					</div>
+					<input type="hidden" id="id" name="id" value="" />
+					<button type="submit" class="btn btn-primary btn-sm">Salvar</button>
 				</form>
 			</div>
 		</section>
