@@ -10,40 +10,41 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.grad.sistemaVacinacao.model.Cargo;
-import com.grad.sistemaVacinacao.service.CargoService;
+import com.grad.sistemaVacinacao.model.LocalVacinacao;
+import com.grad.sistemaVacinacao.service.LocalVacinacaoService;
 
 @Controller
-@RequestMapping("/cargos")
-public class CargoController {
+@RequestMapping("/departamentos")
+public class LocalVacinacaoController {
 
-	private CargoService servico;
+	private LocalVacinacaoService servico;
 
-	public CargoController(CargoService servico) {
+	public LocalVacinacaoController(LocalVacinacaoService servico) {
 		this.servico = servico;
 	}
 
 	@GetMapping("/cadastrar")
 	public String cadastrar() {
 		// TODO carregar dados
-		return "/admin/cargo/cadastro";
+		return "/admin/departamento/cadastro";
 	}
 
 	@PostMapping("/cadastrar")
-	public String salvar(@Valid @ModelAttribute("cargo") Cargo cargo, BindingResult result, ModelMap model) {
+	public String salvar(@Valid @ModelAttribute("localVacinacao") LocalVacinacao localVacinacao, BindingResult result,
+			ModelMap model) {
 
-		System.err.println("entrou ..." + cargo);
+		System.err.println("entrou ..." + localVacinacao);
 
-		servico.cadastrar(cargo);
+		servico.cadastrar(localVacinacao);
 
 		System.err.println("cadastrou ...");
 		servico.listarTodos().forEach(System.err::println);
 
-		return "/admin/cargo/cadastro";
+		return "/admin/departamento/cadastro";
 	}
 
 	@GetMapping("/listar")
 	public String listar() {
-		return "/admin/cargo/lista";
+		return "/admin/departamento/lista";
 	}
 }
