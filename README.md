@@ -18,25 +18,6 @@
 - node js (https://nodejs.org/en/)
 - ...
 
-### Baixar a imagem docker do mysql
-- https://hub.docker.com/_/mysql ($ docker pull mysql)
-
-[¹] Para iniciar uma instância do servidor mysql
-docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
-
-
-onde:
-
-
-**some-mysql** = nome do container
-
-**my-secret-pw** = senha do usuario do mysql;
-
-**tag** = versao do mysql.
-
-https://phoenixnap.com/kb/mysql-docker-container
-
-
 ### Startar a aplicação no repositório local do projeto
 - ./run-sistemavacinacao.sh
 

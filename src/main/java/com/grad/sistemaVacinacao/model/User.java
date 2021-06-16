@@ -11,11 +11,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
-/**
- * Classe model referente ao Usuário contém: atributos, equals e
- * hashcode.Além dos construtores e getters/setters gerados pelo lombok.
- * 
- */
 @Data
 @Builder
 @AllArgsConstructor
@@ -26,29 +21,29 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
+	@Column(name = "user_id")
 	private Integer id;
-	@Column(name = "apelido")
+	@Column(name = "user_name")
 	@Length(min = 5, message = "*Seu nome de usuário deve ter pelo menos 5 caracteres")
 	@NotEmpty(message = "*Forneça um nome de usuário")
-	private String apelido;
+	private String userName;
 	@Column(name = "email")
 	@Email(message = "*Por favor forneça um email válido")
 	@NotEmpty(message = "*Forneça um email válido")
 	private String email;
-	@Column(name = "senha")
+	@Column(name = "password")
 	@Length(min = 5, message = "*Sua senha deve ter pelo menos 5 caracteres")
 	@NotEmpty(message = "*Por favor, forneça sua senha")
-	private String senha;
-	@Column(name = "nome")
+	private String password;
+	@Column(name = "name")
 	@NotEmpty(message = "*Por favor, forneça seu nome")
-	private String nome;
-	@Column(name = "sobrenome")
-	@NotEmpty(message = "*Por favor, forneça sua sobrenome")
-	private String sobrenome;
+	private String name;
 	@Column(name = "cpf")
 	@NotEmpty(message = "*Por favor, forneça seu cpf")
 	private String cpf;
+	@Column(name = "last_name")
+	@NotEmpty(message = "*Por favor, forneça sua sobrenome")
+	private String lastName;
 	@Column(name = "active")
 	private Boolean active;
 	@ManyToMany(cascade = CascadeType.MERGE)

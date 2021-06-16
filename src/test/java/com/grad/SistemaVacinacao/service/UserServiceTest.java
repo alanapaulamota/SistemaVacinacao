@@ -28,37 +28,32 @@ public class UserServiceTest {
 	private UserService userServiceUnderTest;
 	private User user;
 
+	@SuppressWarnings("deprecation")
 	@Before
 	public void setUp() {
 		initMocks(this);
 		userServiceUnderTest = new UserService(mockUserRepository, mockRoleRepository, mockBCryptPasswordEncoder);
-		user = User.builder().id(1).nome("Alana").sobreNome("Paula").email("test@test.com").build();
+		user = User.builder().id(1).name("Alana").lastName("Paula").email("test@test.com").build();
 
 		Mockito.when(mockUserRepository.save(any())).thenReturn(user);
 		Mockito.when(mockUserRepository.findByEmail(anyString())).thenReturn(user);
 	}
 
 	@Test
-	public void testFindUserByEmail() {
-		// Setup
+	public void testBuscarPorByEmail() {
 		final String email = "test@test.com";
 
-		// Run the test
 		final User result = userServiceUnderTest.findUserByEmail(email);
 
-		// Verify the results
 		assertEquals(email, result.getEmail());
 	}
 
 	@Test
-	public void testSaveUser() {
-		// Setup
+	public void testSalvarUsuario() {
 		final String email = "test@test.com";
 
-		// Run the test
 		User result = userServiceUnderTest.saveUser(User.builder().build());
 
-		// Verify the results
 		assertEquals(email, result.getEmail());
 	}
 }

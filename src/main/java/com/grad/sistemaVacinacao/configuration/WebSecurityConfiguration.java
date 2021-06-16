@@ -12,9 +12,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.grad.sistemaVacinacao.service.MyUserDetailsService;
 
-/**
- *
- */
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {

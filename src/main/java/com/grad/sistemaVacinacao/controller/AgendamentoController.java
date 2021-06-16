@@ -5,41 +5,51 @@ import java.time.LocalDateTime;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.grad.sistemaVacinacao.model.Agendamento;
 import com.grad.sistemaVacinacao.repository.AgendamentoRepository;
 
-/**
- * Classe controller referente à
- * {@link com.grad.sistemaVacinacao.model.Agendamento}.
- *
- */
+
 @Controller
-//@RequestMapping("/agendamento")
+@RequestMapping("/agendamento")
 public class AgendamentoController {
 
-	@Autowired
-	AgendamentoRepository agendamentoRepository;
+	@RequestMapping(method = RequestMethod.GET)
+	public String agendamento() {
+		return "/agendamento";
 
-	@GetMapping("/agendamento")
-	@JsonSerialize(using = LocalDateTimeSerializer.class)
-	Iterable<Agendamento> agendamento(@RequestParam("start") @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime start,
-			@RequestParam("end") @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime end) {
-		return agendamentoRepository.findBetween(start, end);
 	}
 
-	@PostMapping("/agendamento")
+	
+//@RestController
+//public class AgendamentoController {
+
+//
+//	@GetMapping("/agendamento")
+//	@JsonSerialize(using = LocalDateTimeSerializer.class)
+//	Iterable<Agendamento> agendamento(@RequestParam("start") @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime start,
+//			@RequestParam("end") @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime end) {
+//		return agendamentoRepository.findBetween(start, end);
+//	}
+//
+	
+//	public static class AgendamentoCreateParams {
+//	public LocalDateTime start;
+//	public LocalDateTime end;
+//	public String text;
+//}
+	
+	@Autowired
+	AgendamentoRepository agendamentoRepository;
+	
+	@PostMapping("/agendamento/create")
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@Transactional
 	Agendamento createAgendamento(@RequestBody AgendamentoCreateParams params) {
@@ -53,7 +63,13 @@ public class AgendamentoController {
 		return e;
 	}
 
-	@PatchMapping("/agendamento")
+	public static class AgendamentoCreateParams {
+		public LocalDateTime start;
+		public LocalDateTime end;
+		public String text;
+	}
+
+	@PostMapping("/agendamento/move")
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@Transactional
 	Agendamento moveAgendamento(@RequestBody AgendamentoMoveParams params) {
@@ -78,7 +94,7 @@ public class AgendamentoController {
 		return e;
 	}
 
-	@DeleteMapping("/agendamento")
+	@PostMapping("/agendamento/delete")
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@Transactional
 	AgendamentoDeleteResponse deleteAgendamento(@RequestBody AgendamentoDeleteParams params) {
@@ -87,7 +103,7 @@ public class AgendamentoController {
 
 		return new AgendamentoDeleteResponse() {
 			{
-				message = "Excluído";
+				message = "Deleted";
 			}
 		};
 	}
@@ -100,11 +116,6 @@ public class AgendamentoController {
 		public String message;
 	}
 
-	public static class AgendamentoCreateParams {
-		public LocalDateTime start;
-		public LocalDateTime end;
-		public String text;
-	}
 
 	public static class AgendamentoMoveParams {
 		public Long id;
