@@ -4,28 +4,6 @@ body{
     background-color: Gainsboro;
 }
 html, body {height:100%;}
-/background color itens nav hover/
-#navbarSite .nav-item:hover .nav-link{
-    transition: background-color 0.3s;
-    background-color:#39bcb6;
-}
-/cor letras itens nav hover/
-#navbarSite .nav-item:hover .nav-link {
-    transition: color 0.3s;
-    color: white;
-}
-/background color dropdown menu/
-#navbarSite .dropdown-menu{
-    background-color: white;
-}
-/cor letra dropdown item/
-#navbarSite .dropdown-item{
-    color: white;
-}
-/cor letra/
-#navbarSite .nav-item .nav-link{
-    color:white;
-}
 table{
 border-collapse: separate;
   border-spacing: 10px 10px;
@@ -50,4 +28,10 @@ th {
   border-color: white;
   ;
 }
+
+.btn-lg{
+	background-color: #4E598F;
+	color:#fff;
+}
+
 
