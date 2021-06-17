@@ -1,11 +1,21 @@
 /*Cores
 #39bcb6 Azul-verde*/
-body{
-    background-color: Gainsboro;
+body {
+	background-color: Gainsboro;
 }
-html, body {height:100%;}
 
-.btn-lg{
+html, body {
+	height: 100%;
+}
+
+.btn-lg {
 	background-color: #4E598F;
-	color:#fff;
+	color: #fff;
+}
+
+#container-rodape {
+width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
 }

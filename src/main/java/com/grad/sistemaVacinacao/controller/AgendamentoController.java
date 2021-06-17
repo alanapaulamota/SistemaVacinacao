@@ -28,9 +28,9 @@ public class AgendamentoController {
 	}
 
 	
-//@RestController
-//public class AgendamentoController {
-
+//@Controller
+//@RequestMapping("/agendamento")public class AgendamentoController {
+//
 //
 //	@GetMapping("/agendamento")
 //	@JsonSerialize(using = LocalDateTimeSerializer.class)
@@ -39,12 +39,7 @@ public class AgendamentoController {
 //		return agendamentoRepository.findBetween(start, end);
 //	}
 //
-	
-//	public static class AgendamentoCreateParams {
-//	public LocalDateTime start;
-//	public LocalDateTime end;
-//	public String text;
-//}
+//	
 	
 	@Autowired
 	AgendamentoRepository agendamentoRepository;
