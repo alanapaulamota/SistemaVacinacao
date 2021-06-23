@@ -12,6 +12,19 @@
 	background: #39BCB6;
 }
 
+.dropdown-menu {
+	background: #39BCB6 !important;
+}
+
+.btn-info {
+	background: #39BCB6 !important;
+	border: none !important;
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn {
+	font-size: medium;
+}
+
 .nav-menu>ul {
 	display: flex;
 }
@@ -27,13 +40,12 @@
 	position: relative;
 	color: #fff;
 	transition: 0.3s;
-	font-size: 16.5px;
 	font-weight: 300;
 	font-family: "Open Sans", sans-serif;
 	font-size-adjust: auto;
 	text-transform: uppercase;
-	font-weight: 300;
 	padding: 0 3px;
+	font-size: medium;
 }
 
 .nav-menu a:hover, .nav-menu .active>a, .nav-menu li:hover>a {

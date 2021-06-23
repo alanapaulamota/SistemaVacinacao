@@ -113,93 +113,67 @@
 			<div class="container" id="cadastro">
 				<form action="/funcionarios/salvar" method="POST">
 					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label for="nome">Nome da Vacina</label> <input type="text"
-								class="form-control" id="nome" placeholder="Nome da Vacina"
-								autofocus="autofocus" name="nome" value="" />
-							<div class="invalid-feedback"></div>
-						</div>
-						<div class="form-group col-md-6">
-							<label for="fabricante">Fabricante</label> <input type="text"
-								class="form-control" id="fabricante"
-								placeholder="Nome da Vacina" autofocus="autofocus"
-								name="fabricante" value="" />
-							<div class="invalid-feedback"></div>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label for="dataEntrada">Data de Vencimento</label> <input
-								type="date" class="form-control" id="dataVencimento"
-								name="dataEntrada" value="" />
-							<div class="invalid-feedback"></div>
-						</div>
 						<!-- 						<div class="form-group col-md-6"> -->
-						<!-- 							<label for="dataSaida">Data de Saída</label> <input type="date" -->
-						<!-- 								class="form-control" id="dataSaida" name="dataSaida" value="" /> -->
+						<!-- 							<label for="nome">Nome da Vacina</label> <input type="text" -->
+						<!-- 								class="form-control" id="nome" placeholder="Nome da Vacina" -->
+						<!-- 								autofocus="autofocus" name="nome" value="" /> -->
 						<!-- 							<div class="invalid-feedback"></div> -->
 						<!-- 						</div> -->
-						<!-- 					</div> -->
-						<div class="form-row">
+						<div class="form-group">
+							<label class="col-md-3 control-label">Nome da Vacina</label>
+							<div class="col-md-5">
+								<div
+									th:if="${vacinaList != null and not #lists.isEmpty(vacinaList)}">
+									<select th:field="*{vacina}">
+										<option th:each="vacina : ${vacinaList}"
+											th:value="${vacina.institutionId}"
+											th:text="${vacina.name}" />
+									</select>
+								</div>
+								<div
+									th:if="${vacinaList == null or lists.isEmpty(vacinaList)}">
+									<div>"No Institutions were found, please create some
+										first"</div>
+								</div>
+							</div>
 							<div class="form-group col-md-6">
-								<label for="cargo">Tipo</label> <select id="cargo"
-									class="form-control" name="cargo">
-									<option value="">Selecione...</option>
-									<option value="1">HEPATITE</option>
-									<option value="2">SARAMPO</option>
-									<option value="3">COVID</option>
-									<option value="4">ABCDE</option>
-									<option value="5">FGHIJK</option>
-									<!-- 								<option value="9">Auxiliar de RH</option> -->
-									<!-- 								<option value="10">Coordenador de RH</option> -->
-									<!-- 								<option value="11">Psicologo</option> -->
-								</select>
+								<label for="fabricante">Fabricante</label> <input type="text"
+									class="form-control" id="fabricante"
+									placeholder="Nome da Vacina" autofocus="autofocus"
+									name="fabricante" value="" />
 								<div class="invalid-feedback"></div>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label for="fornecedor">Fornecedor</label> <input type="text"
-									class="form-control" id="fabricante" name="fornecedor" value="" />
+								<label for="dataEntrada">Data de Vencimento</label> <input
+									type="date" class="form-control" id="dataVencimento"
+									name="dataEntrada" value="" />
 								<div class="invalid-feedback"></div>
 							</div>
-							<!-- 						<div class="form-group col-md-6"> -->
-							<!-- 							<label for="logradouro">Logradouro</label> <input type="text" -->
-							<!-- 								class="form-control" id="logradouro" -->
-							<!-- 								placeholder="logradouro sem número" name="endereco.logradouro" -->
-							<!-- 								value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 					</div> -->
-							<!-- 					<div class="form-row"> -->
-							<!-- 						<div class="form-group col-md-6"> -->
-							<!-- 							<label for="numero">Número</label> <input type="text" -->
-							<!-- 								class="form-control" id="numero" name="endereco.numero" value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 						<div class="form-group col-md-6"> -->
-							<!-- 							<label for="complemento">Complemento</label> <input type="text" -->
-							<!-- 								class="form-control" id="complemento" -->
-							<!-- 								placeholder="fundos, casa, AP. 102, .." -->
-							<!-- 								name="endereco.complemento" value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 					</div> -->
-							<!-- 					<div class="form-row"> -->
-							<!-- 						<div class="form-group col-md-6"> -->
-							<!-- 							<label for="bairro">Bairro</label> <input type="text" -->
-							<!-- 								class="form-control" id="bairro" name="endereco.bairro" value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 						<div class="form-group col-md-2"> -->
-							<!-- 							<label for="cep">Cep</label> <input type="text" -->
-							<!-- 								class="form-control" id="cep" data-mask="00000-000" -->
-							<!-- 								name="endereco.cep" value="" /> -->
-							<!-- 							<div class="invalid-feedback"></div> -->
-							<!-- 						</div> -->
-							<!-- 					</div> -->
-							<input type="hidden" id="id" name="id" value="" />
-							<button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="cargo">Tipo</label> <select id="cargo"
+										class="form-control" name="cargo">
+										<option value="">Selecione...</option>
+										<option value="1">HEPATITE</option>
+										<option value="2">SARAMPO</option>
+										<option value="3">COVID</option>
+										<option value="4">ABCDE</option>
+										<option value="5">FGHIJK</option>
+									</select>
+									<div class="invalid-feedback"></div>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="fornecedor">Fornecedor</label> <input type="text"
+										class="form-control" id="fornecedor" name="fornecedor"
+										value="" />
+									<div class="invalid-feedback"></div>
+								</div>
+								<input type="hidden" id="id" name="id" value="" />
+								<button type="submit" class="btn btn-primary btn-sm">Salvar</button>
 				</form>
 			</div>
 		</section>
