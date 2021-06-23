@@ -12,6 +12,15 @@
 	background: #39BCB6;
 }
 
+.btn-info, .dropdown-menu {
+	background: #39BCB6 !important;
+}
+
+.btn-group .dropdown-toggle {
+	font-size: medium;
+	border: none !important;
+}
+
 .nav-menu>ul {
 	display: flex;
 }
@@ -27,12 +36,11 @@
 	position: relative;
 	color: #fff;
 	transition: 0.3s;
-	font-size: 16.5px;
+	font-size: medium;
 	font-weight: 300;
 	font-family: "Open Sans", sans-serif;
 	font-size-adjust: auto;
 	text-transform: uppercase;
-	font-weight: 300;
 	padding: 0 3px;
 }
 
