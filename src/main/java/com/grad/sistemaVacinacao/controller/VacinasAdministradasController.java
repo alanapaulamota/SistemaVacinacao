@@ -1,6 +1,10 @@
 package com.grad.sistemaVacinacao.controller;
 
 import com.grad.sistemaVacinacao.model.ItemCarteiraVacinacao;
+import com.grad.sistemaVacinacao.model.Vacina;
+import com.grad.sistemaVacinacao.service.VacinaService;
+
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -17,20 +21,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/vacinasAdministradas")
 public class VacinasAdministradasController {
 
+    private VacinaService vacinaService;
+
+    public VacinasAdministradasController(VacinaService vacinaService) {
+        this.vacinaService = vacinaService;
+    }
+
     @GetMapping("/cadastrar")
-    public String cadastrar(Model model) {
-        // return "/admin/vacinaAdministrada/cadastro";
-        
+    public String cadastrar(ModelMap model) {
+
+        // recupera as vacinas cadastradas
+        List<Vacina> vacinas = vacinaService.listarTodos();
+        // TODO disponibilizar a lista de vacinas para o template popular a combobox
+
+        // testando passagem de atributo para o template
         model.addAttribute("teste", "HELLO");
-        
+
         return "/admin/vacinaAdministrada/novo";
     }
 
     @PostMapping("/cadastrar")
     public String salvar(@Valid @ModelAttribute("item") ItemCarteiraVacinacao item, BindingResult result, ModelMap model) {
-        
-        System.err.println("entrou: "+item);
-        
+
+        System.err.println("entrou: " + item);
+
         return "/admin/vacinaAdministrada/novo";
     }
 
