@@ -20,25 +20,6 @@
 	<!--Navbar da P�gina-->
 	<nav class="navbar navbar-expand-lg navbar-dark justify-content-end"
 		style="height: 60px; background-color: #39bcb6;">
-		<!--Imagem Logo SNV-->
-		<!--<a class="navbar-brand" href="#">
-        <img src="img/zegotao.png" width="35" height="80" alt="Logo SNV" title="Logo SNV">
-      </a>-->
-		<!-- 		<form method="POST" modelAttribute="userForm" class="form-signin"> -->
-
-		<!-- 			<!--navbar-->
-		<!-- 			<div class="nav justify-content-end" id="navbarSite"> -->
-		<!-- 				<ul class="nav justify-content-end "> -->
-
-		<!-- 					<li> -->
-		<!-- 						<form th:action="@{/login}" method="post"> -->
-		<!-- 							<button class="btn btn-md btn-cadastro btn-lg" type="Submit">Página -->
-		<!-- 								Inicial</button> -->
-		<!-- 						</form> -->
-		<!-- 					</li> -->
-		<!-- 				</ul> -->
-		<!-- 			</div> -->
-		<!-- 		</form> -->
 
 		<form th:action="@{/home}" method="get">
 			<button class="btn btn-md btn-home btn-lg" type="Submit">Voltar
@@ -47,8 +28,11 @@
 	</nav>
 
 	<!-- Corpo -->
-	<section class="body">
+	<section class="body container-fluid" style="width: 95%;">
 		<form action="/AltDados/cadastrar" method="POST">
+			<br>
+			<h1>Complemente seus dados:</h1>
+			<br>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="telefone">Telefone</label> <input type="text"
@@ -57,11 +41,13 @@
 					<div class="invalid-feedback"></div>
 				</div>
 			</div>
+			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="data">Data de Nascimento</label> <input type="date"
 						class="form-control" id="data" name="data" value="" />
 					<div class="invalid-feedback"></div>
 				</div>
+			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="sexo">Sexo</label> <select id="sexo"
@@ -76,7 +62,7 @@
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label for="endereco">Endereco</label> <input type="text"
+					<label for="endereco">Endereço</label> <input type="text"
 						class="form-control" id="endereco" name="endereco" value="" />
 					<div class="invalid-feedback"></div>
 				</div>
@@ -129,8 +115,8 @@
 			<button type="submit" class="btn btn-primary btn-sm">Salvar</button>
 		</form>
 	</section>
-
 	</div>
+	<br>
 
 	<footer class="layout-footer">
 		<!-- Rodapé-->
